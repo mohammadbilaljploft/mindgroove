@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { Eye, EyeOff } from "lucide-react"; // for eye icons
-import Welcome from "@/components/modal/welcome";
+import Welcome from "@/components/modal/Welcome";
 
 export default function Page() {
   const [showPassword, setShowPassword] = useState(false);
