@@ -11,7 +11,7 @@ export default function HomeSidebar() {
   <div className="sidebar_box">
 
       <div className="logo_img">
-        <img src="/img/logo_home_sidebar.svg" />
+       <a href="/" ><img src="/img/logo_home_sidebar.svg" /></a>
     </div>
 
     <div className="sidebar_menu">
