@@ -1501,8 +1501,20 @@ input:focus {
   background-size: cover;
   height: 100%;
   width: 100%;
-  padding: 70px 20px;
+  padding: 70px 20px 20px;
   margin-top: 60px;
+}
+
+.copy_right {
+  text-align: center;
+  color: var(--white);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border-top: 1px solid #4d4d4d;
+  padding: 30px 0 20px;
+  margin-top: 30px;
 }
 
 .footer_sec .footer_logo img {
@@ -3205,6 +3217,8 @@ body.common-bg {
 
 
 
+/* music css start */
+
 .music_section .music_row_header {
   display: flex;
   align-items: center;
@@ -3524,12 +3538,266 @@ body.common-bg {
   line-height: 24px;
 }
 
-.audio-waveform-container .waveform_align .waveform-viz{
+.audio-waveform-container .waveform_align .waveform-viz {
   background-color: transparent !important;
   align-items: center !important;
 }
-.audio-waveform-container .waveform_align .waveform-bar{
-background: var(--Neutral-70);
+
+.audio-waveform-container .waveform_align .waveform-bar {
+  background: var(--Neutral-70);
 }
 
+
+.waveform_tabs_sec .nav-pills {
+  border-radius: 50px;
+  background: var(--Neutral-70, #606060);
+  width: fit-content;
+}
+
+.waveform_tabs_sec .nav-pills .nav-link {
+  color: var(--primary);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+.waveform_tabs_sec .nav-pills .nav-link.active {
+  border-radius: 50px;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+
 /* audio waveform css end */
+
+
+
+
+
+.track_sc .track-right .track-menu-wrapper {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.track_sc .track-right .track-menu-wrapper .track-menu-dropdown{
+  position: relative;
+  background-color: transparent;
+  top: 0;
+  box-shadow: unset;
+
+}
+
+
+.track_sc .track-card {
+  border: unset !important;
+}
+
+.track_sc .track-card .track-header {
+  background: #323232 !important;
+  border: unset !important;
+  padding: 0px 15px 0px 0;
+}
+
+.track_sc .track-card .track-header.active {
+  background: var(--white) !important;
+}
+
+.track_sc .track-card .track-header.active .track-number {
+  background: var(--primary) !important;
+}
+
+.track_sc .track-card .track-header.active .track-info h3 {
+  color: #000;
+}
+
+.track_sc .track-card .track-header.active .track-info span {
+  color: #000 !important;
+}
+
+.track_sc .track-card .track-number {
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  background: #323232;
+  border: 1px solid #000;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  display: flex;
+  width: 45px !important;
+  /* padding-top: 20px; */
+  margin-top: 14px;
+}
+
+.track_sc .track-info h3 {
+  color: var(--white);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.track_sc .track-info span {
+  color: var(--white) !important;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+}
+
+.track_sc .track-accordion {
+  background: #323232 !important;
+}
+
+.track_sc .track-card .track-header.active .accordion-toggle {
+  color: #000;
+}
+
+.track_sc .track-card {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+}
+
+.main_card_track {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main_card_track .track-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main_card_track .track-header .track-left{
+flex: 2;
+}
+.main_card_track .track-header span{ 
+  flex: 1;
+  display: block;
+  color: var(--white);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+.main_card_track .track-header.active span{
+  color: var(--black);
+}
+
+.main_card_track .track-header .track-menu-wrapper{
+  flex: 1;
+}
+
+.main_card_track .track-header span.accordion-toggle{
+    flex: unset;
+}
+.player_pitch {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 50px 0 20px;
+
+}
+
+.player_pitch .music_min span {
+  background-color: transparent;
+}
+
+.border_bottom {
+  border-bottom: 1px solid #606060;
+  padding: 10px 15px 30px;
+  margin-bottom: 20px;
+}
+
+
+.track_header_style {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.track_header_style span:first-child{
+    flex: 0 0 70px;
+}
+.track_header_style span {
+  flex: 1;
+  color: var(--white);
+  text-align: start;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+
+
+.track_header_style span:nth-child(2) {
+  flex: 2;
+}
+
+@media (max-width:992px) {
+.main_card_track .track-header span {
+    font-size: 12px;
+  
+}
+.track_header_style span {
+    font-size: 12px;
+}
+}
+@media (max-width:767px) {
+  .main_card_track .track-header{
+    flex-direction: unset !important;
+  }
+.main_card_track .track-header span {
+   display: none;
+  
+}
+.track_header_style span {
+    display: none;
+}
+.main_card_track .track-header span.accordion-toggle{
+  display: block;
+}
+.track_sc .track-right .track-menu-wrapper .track-menu-dropdown {
+    position: absolute;
+    flex-direction: column;
+    background: #000;
+    padding: 10px;
+    top: 30px;
+}
+.main_card_track{
+  overflow: unset !important;
+  border-radius: 10px;
+}
+.track-card{
+    overflow: unset !important;
+}
+.track_sc .track-card .track-header {
+
+    border-radius: 10px;
+}
+}
+
+
+/* music css end */

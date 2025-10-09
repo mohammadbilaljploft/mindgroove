@@ -55,6 +55,10 @@ export default function Footer() {
                             </div>
                         </Col>
                     </Row>
+
+                    <div className="copy_right">
+                        <p>Copyright © 2025. All Rights Reserved.</p>
+                    </div>
                 </Container>
 
             </footer>
