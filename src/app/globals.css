@@ -3516,6 +3516,15 @@ body.common-bg {
   gap: 10px;
 }
 
+
+.audio-waveform-container .waveform_align h6{
+  color: #FFF;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+
 .audio-waveform-container .waveform_align .play-button-circle {
   background: transparent;
 

@@ -19,7 +19,7 @@ export default function Footer() {
                     <Row className="g-5 ">
                         <Col lg={6} md={6}>
                             <div className="footer_logo footer_title">
-                                <img src="/img/footer_logo.png" alt="Logo" />
+                                 <a href="/" ><img src="/img/footer_logo.png" alt="Logo" /></a>
                                 <p>MindGroove is a streaming service that allows you to listen to millions of 
                                     songs. Its great features include the ability to download your favorite tracks and play them offline, lyrics in real time, listening across all your favorite device.</p>
                                
