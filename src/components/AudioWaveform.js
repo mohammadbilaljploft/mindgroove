@@ -131,9 +131,12 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                       ))}
                     </div>
 
-                    <h6>{duration}</h6>
+                   <div className="align_icon">
+                     <h6>{duration}</h6>
                     <img src="/img/download_icon.svg" alt="Download" />
                     <img src="/img/plus_icon.svg" alt="Add" />
+                    <img src="/img/share.svg" alt="Share" />
+                   </div>
                   </div>
                 </div>
               </Tab.Pane>
@@ -172,10 +175,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
           gap: 10px;
         }
 
-        .column-layout {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+      
 
         .control-info {
           display: flex;

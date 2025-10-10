@@ -87,10 +87,15 @@ export default function Music() {
     document.body.classList.add("active-row-click");
   };
 
-  const handleArrowClick = () => {
-    document.body.classList.add("active-row-click");
-    if (currentTrack) setActiveTrackId(currentTrack.trackId);
-  };
+const handleArrowClick = () => {
+  document.body.classList.toggle("active-row-click");
+
+  if (currentTrack) {
+    setActiveTrackId(currentTrack.trackId);
+  } else {
+    setActiveTrackId(tracks[0]?.trackId || null);
+  }
+};
 
   return (
     <section className="sec_pad track_sc">

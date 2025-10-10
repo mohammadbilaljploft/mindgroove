@@ -218,6 +218,10 @@ button {
 .search_bg .search_box {
   display: none;
 }
+ .search_box.active{
+  border: 1px solid var(--primary);
+}
+
 
 .search_box.search_page_bar {
   justify-content: space-between;
@@ -286,6 +290,7 @@ button {
   backdrop-filter: blur(2px);
   padding: 0px 8px;
   gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.70);
 }
 
 
@@ -3542,8 +3547,13 @@ body.common-bg {
   display: none;
   position: fixed;
   bottom: 197px;
-  z-index: 9;
+  z-index: 99 ;
   right: 14px;
+}
+.align_icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 @keyframes arrowUpDown {
@@ -3927,7 +3937,7 @@ body.common-bg {
 }
 
 .border_bottom {
-  border-bottom: 1px solid #606060;
+  border-bottom: 1px solid #747474 !important;
   padding: 10px 15px 30px;
   margin-bottom: 20px;
 }
@@ -3993,6 +4003,10 @@ body.common-bg {
   .player_pitch {
     gap: 20px;
     flex-wrap: wrap;
+    padding: 20px 0;
+  }
+ .audio-waveform-container .waveform_align{
+    gap: 20px !important;
   }
 
   .border_bottom {
@@ -4041,6 +4055,7 @@ body.common-bg {
 
   .track_sc .track-card .track-header {
     border-radius: 10px 10px 0;
+    align-items: center;
   }
 }
 
