@@ -46,8 +46,8 @@ export default function Page() {
 
                                 <div className="tabs_sec ">
                                     <Tab.Container id="left-tabs-example" defaultActiveKey="profile">
-                                        <Row>
-                                            <Col lg={2}>
+                                        <Row className="g-4">
+                                            <Col lg={3} xl={2}>
                                                 <div className="nav_item_tab_box">
                                                     <Nav variant="pills" className="flex-column">
                                                         <Nav.Item>
@@ -72,10 +72,12 @@ export default function Page() {
                                                 </div>
                                             </Col>
 
-                                            <Col lg={9} >
+                                            <Col lg={8} xl={9}>
                                                 <Tab.Content>
                                                     <Tab.Pane eventKey="profile">
-                                                        <Row className="g-4">
+                                                      <Row>
+                                                        <Col xl={10} lg={12}>
+                                                          <Row className="g-4">
                                                             <Col lg={6}>
                                                                 <div className="form_field">
                                                                     <Form.Label>First Name * </Form.Label>
@@ -191,6 +193,8 @@ export default function Page() {
                                                                 </div>
                                                             </Col>
                                                         </Row>
+                                                        </Col>
+                                                      </Row>
                                                     </Tab.Pane>
 
                                                     <Tab.Pane eventKey="playlist">

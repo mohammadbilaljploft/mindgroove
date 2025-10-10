@@ -160,7 +160,7 @@ export default function Header() {
                       height: "25px",
                       borderRadius: "25px",
                       background:
-                        activeSection === "ask" ? "#17DCF5" : "#ccc",
+                        activeSection === "ask" ? "#17DCF5" : "#878787",
                       position: "relative",
                       cursor: "pointer",
                       transition: "0.3s",
