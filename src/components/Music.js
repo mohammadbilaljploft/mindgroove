@@ -11,6 +11,7 @@ export default function Music() {
   const [expandedTrack, setExpandedTrack] = useState(null);
   const [openMenuTrack, setOpenMenuTrack] = useState(null);
   const [isDesktop, setIsDesktop] = useState(true);
+  const [activeTrackId, setActiveTrackId] = useState(null);
 
   // Detect desktop width
   useEffect(() => {
@@ -68,6 +69,7 @@ export default function Music() {
 
   const toggleAccordion = (trackId) => {
     setExpandedTrack((prev) => (prev === trackId ? null : trackId));
+    setActiveTrackId(trackId); // Chevron click also sets active
   };
 
   const toggleMenu = (trackId) => {
@@ -76,140 +78,176 @@ export default function Music() {
 
   const handleTrackClick = (track) => {
     playTrack(track);
+    setActiveTrackId(track.trackId); // Header click sets active
+  };
+
+  const handleNumberClick = (track) => {
+    playTrack(track);
+    setActiveTrackId(track.trackId);
+    document.body.classList.add("active-row-click");
+  };
+
+  const handleArrowClick = () => {
+    document.body.classList.add("active-row-click");
+    if (currentTrack) setActiveTrackId(currentTrack.trackId);
   };
 
   return (
     <section className="sec_pad track_sc">
+      <button className="down_arrow_player" onClick={handleArrowClick}>
+        <img src="/img/down_arrow.svg" />
+      </button>
+
       <div className="main_title">
         <h2>
           Tracks <span>(550+ RESULTS)</span>
         </h2>
       </div>
+
       <div className="track_header_style">
         <span>#</span>
         <span>Title</span>
-        <span>Relase Date</span>
+        <span>Release Date</span>
         <span>Time</span>
         <span>Genre</span>
         <span>Mood</span>
         <span>BPM</span>
         <span></span>
       </div>
+
       <div className="track-list">
         {tracks.map((track, index) => {
-          const isActive = currentTrack?.title === track.title;
+          const isActive = activeTrackId === track.trackId;
           const isExpanded = expandedTrack === track.trackId;
           const isMenuOpen = openMenuTrack === track.trackId;
           const isLiked = likedTracks.includes(track.trackId);
 
           return (
-            <>
+            <div
+              key={track.trackId}
+              className={`track-card ${isActive ? "active" : ""}`}
+            >
+              {/* Track number */}
+              <div
+                className="track-number"
+                onClick={() => handleNumberClick(track)}
+              >
+                {isActive ? <FaPlay color="#fff" /> : index + 1}
+              </div>
 
+              <div className="main_card_track">
+                {/* Track header */}
+                <div
+                  className="track-header"
+                  onClick={() => handleTrackClick(track)}
+                >
+                  <div className="track-left">
+                    <img
+                      className="track-cover"
+                      src={track.cover}
+                      alt={track.title}
+                    />
+                    <div className="track-info">
+                      <h3>{track.title}</h3>
+                      <span>{track.artist}</span>
+                    </div>
+                    {/* Chevron */}
+                    <span
+                      className={`accordion-toggle ${
+                        isExpanded ? "expanded" : ""
+                      }`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleAccordion(track.trackId);
+                      }}
+                    >
+                      <FaChevronDown />
+                    </span>
+                  </div>
 
-              <div key={track.trackId} className="track-card">
+                  <span>{track.date}</span>
+                  <span>{track.time}</span>
+                  <span>{track.genre}</span>
+                  <span>{track.mood}</span>
+                  <span>{track.bpm}</span>
 
-                <div className="track-number">
-
-                  {isActive ? <FaPlay color="#fff" /> : index + 1}
-                </div>
-                <div className="main_card_track">
-                  <div
-                    className={`track-header ${isActive ? "active" : ""}`}
-                    onClick={() => handleTrackClick(track)}
-                  >
-                    <div className="track-left">
-
-                      <img className="track-cover" src={track.cover} alt={track.title} />
-                      <div className="track-info">
-                        <h3>{track.title}</h3>
-                        <span>{track.artist}</span>
-                      </div>
-                      <span
-                        className={`accordion-toggle ${isExpanded ? "expanded" : ""}`}
+                  <div className="track-right">
+                    <div className="track-menu-wrapper">
+                      <img
+                        src="/img/menu_icon.svg"
+                        alt="Menu"
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleAccordion(track.trackId);
+                          toggleMenu(track.trackId);
                         }}
-                      >
-                        <FaChevronDown />
-                      </span>
+                        className="menu-icon"
+                      />
+                      {(isDesktop || isMenuOpen) && (
+                        <div className="track-menu-dropdown">
+                          <img src="/img/info_icon.svg" alt="Info" />
+                          <img src="/img/download_icon.svg" alt="Download" />
+                          <img src="/img/plus_icon.svg" alt="Add" />
+                          <img
+                            src={
+                              isLiked
+                                ? "/img/fill_heart.svg"
+                                : "/img/heart_icon.svg"
+                            }
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleLike(track.trackId);
+                            }}
+                            alt="Like"
+                            className="heart_img"
+                          />
+                        </div>
+                      )}
                     </div>
+                  </div>
+                </div>
 
-                    <span>Nov 4, 2023</span>
-                    <span>Nov 4, 2023</span>
-                    <span>Nov 4, 2023</span>
-                    <span>Nov 4, 2023</span>
-                    <span>Nov 4, 2023</span>
-
-                    <div className="track-right">
-                      <div className="track-menu-wrapper">
-                        <img
-                          src="/img/menu_icon.svg"
-                          alt="Menu"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleMenu(track.trackId);
-                          }}
-                          className="menu-icon"
-                        />
-                        {(isDesktop || isMenuOpen) && (
-                          <div className="track-menu-dropdown">
-                            <img src="/img/info_icon.svg" alt="Info" />
-                            <img src="/img/download_icon.svg" alt="Download" />
-                            <img src="/img/plus_icon.svg" alt="Add" />
-                            <img
-                              src={isLiked ? "/img/fill_heart.svg" : "/img/heart_icon.svg"}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleLike(track.trackId);
-                              }}
-                              alt="Like"
-                               className="heart_img"
-                            />
-                          </div>
-                        )}
+                {/* Accordion content */}
+                {isExpanded && (
+                  <div className="track-accordion">
+                    <AudioWaveform
+                      liked={isLiked}
+                      onToggleLike={() => toggleLike(track.trackId)}
+                    />
+                    <div className="player_pitch">
+                      <div className="music_min">
+                        <h6>GENRE</h6>
+                        <div className="align_min">
+                          <span>HIP HOP</span>
+                        </div>
+                      </div>
+                      <div className="music_min">
+                        <h6>MOODS</h6>
+                        <div className="align_min">
+                          <span>CONFIDENT</span>
+                          <span>MOODY</span>
+                        </div>
+                      </div>
+                      <div className="music_min">
+                        <h6>KEYWORDS</h6>
+                        <div className="align_min">
+                          <span>PUNCHY</span>
+                          <span>SPORTS</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  {isExpanded && (
-                    <div className="track-accordion">
-                      <AudioWaveform
-                        liked={isLiked}
-                        onToggleLike={() => toggleLike(track.trackId)}
-                      />
-                      <div className="player_pitch">
-                        <div className="music_min">
-                          <h6>GENRE</h6>
-                          <div className="align_min">
-                            <span>HIP HOP</span>
-                          </div>
-                        </div>
-                        <div className="music_min">
-                          <h6>MOODS</h6>
-                          <div className="align_min">
-                            <span>CONFIDENT</span>
-                            <span>MOODY</span>
-                          </div>
-                        </div>
-                        <div className="music_min">
-                          <h6>KEYWORDS</h6>
-                          <div className="align_min">
-                            <span>PUNCHY</span>
-                            <span>SPORTS</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
 
       <style jsx>{`
+        body.active-row-click {
+          background-color: #f0f0f0;
+        }
+
         .track-list {
           display: flex;
           flex-direction: column;
@@ -220,7 +258,10 @@ export default function Music() {
           border: 1px solid #ddd;
           border-radius: 8px;
           overflow: hidden;
+          transition: background 0.2s;
         }
+
+ 
 
         .track-header {
           display: flex;
@@ -232,11 +273,6 @@ export default function Music() {
           transition: background 0.2s;
         }
 
-        .track-header.active {
-          background: #000;
-          color: #fff;
-        }
-
         .track-left {
           display: flex;
           align-items: center;
@@ -246,6 +282,7 @@ export default function Music() {
         .track-number {
           width: 25px;
           text-align: center;
+          cursor: pointer;
         }
 
         .track-cover {
@@ -308,14 +345,6 @@ export default function Music() {
           gap: 10px;
         }
 
-        .track-subdetails {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
-          font-size: 12px;
-          color: #555;
-        }
-
         @media (max-width: 767px) {
           .track-header {
             flex-direction: column;
@@ -323,10 +352,6 @@ export default function Music() {
           }
           .track-right {
             margin-top: 5px;
-          }
-          .track-subdetails {
-            flex-direction: column;
-            gap: 5px;
           }
         }
       `}</style>

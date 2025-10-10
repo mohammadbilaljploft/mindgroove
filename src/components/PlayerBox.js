@@ -67,6 +67,7 @@ export default function PlayerBox() {
           />
           <img src="/img/icon_play04.svg" />
           <img src="/img/icon_play05.svg" />
+        
         </div>
 
         <div>
