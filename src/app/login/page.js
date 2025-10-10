@@ -15,19 +15,19 @@ export default function Page() {
                         <Col lg={6} xl={4}>
                             <div className="">
                                 <div className="login_logo_img">
-                                    <img src="/img/logo_img01.svg" alt="Logo" />
+                                    <a href="/" ><img src="/img/logo_img01.svg" alt="Logo" /></a>
                                 </div>
 
-                               
+
 
                                 <Form className="form_sec ">
                                     {/* Email Field */}
-                                     <div className="login_title">
-                                    <h3>Hi, Welcome Back!</h3>
-                                    <p>
-                                        Enjoy the best music collection of your choice, login now.
-                                    </p>
-                                </div>
+                                    <div className="login_title">
+                                        <h3>Hi, Welcome Back!</h3>
+                                        <p>
+                                            Enjoy the best music collection of your choice, login now.
+                                        </p>
+                                    </div>
                                     <div className="form_field">
                                         <Form.Label>Email Address</Form.Label>
                                         <div className="gradients_field">
@@ -57,8 +57,7 @@ export default function Page() {
                                     </div>
 
                                     {/* Remember Me Checkbox */}
-                                    <div className="form_field">
-
+                                    <div className="form_field forgot_item">
 
                                         <div className="check_box_field mb-2">
                                             <Form.Check
@@ -79,14 +78,15 @@ export default function Page() {
                                                 I accept the <strong>Terms of Use</strong>
                                             </label>
                                         </div>
-
+                                          
+                                          <a href="/forgotpassword" className="forgot_text">Forget Password?</a>
 
                                     </div>
 
                                     <div className="form_field">
-                                        <button type="submit" className="main_btn w-100">
+                                        <a href="/my-accounts" type="submit" className="main_btn w-100">
                                             Login
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <div className="option_or">
@@ -95,19 +95,18 @@ export default function Page() {
                                         <span></span>
                                     </div>
                                     <div className="common_gradients">
-                                       <div className="common_black">
-                                        <a href="" ><img src="/img/googlelogo.svg" alt="Logo" />Login with Google</a>
-                                       </div>
+                                        <div className="common_black">
+                                            <a href="" ><img src="/img/googlelogo.svg" alt="Logo" />Login with Google</a>
+                                        </div>
                                     </div>
 
-                                     <div className="dont_have_ac">
-                                        <span>Don’t have an account yet? <a href="">Create a new account</a></span>
-                                     </div>
+                                    <div className="dont_have_ac">
+                                        <span>Don’t have an account yet? <a href="/Register">Create a new account</a></span>
+                                    </div>
                                 </Form>
                             </div>
                         </Col>
 
-                        {/* Right Side Image */}
                         <Col lg={6} xl={6}>
                             <div className="login_img">
                                 <img src="/img/login_img.png" alt="Login" />

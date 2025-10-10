@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
-import BodyClassHandler from "./BodyClassHandler"; // ✅ this now resolves correctly
+import BodyClassHandler from "./BodyClassHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +23,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <BodyClassHandler />
+        <div className="app-wrapper">
           {children}
-
-          
+        </div>
       </body>
     </html>
   );

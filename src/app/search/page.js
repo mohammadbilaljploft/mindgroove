@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import HomeSidebar from "@/components/HomeSidebar";
 import { motion } from "framer-motion";
-import { Container } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 import TrackDetail from "@/components/modal/TrackDetail";
 import Music from "@/components/Music";
 import { PlayerProvider } from "@/components/PlayerContext";
@@ -16,6 +16,13 @@ import "swiper/css/pagination";
 
 
 export default function Page() {
+
+  const [activeSection, setActiveSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setActiveSection((prev) => (prev === section ? null : section));
+  };
+
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -42,8 +49,8 @@ export default function Page() {
   const songData = {
     title: 'Sunset',
     artist: 'Dua Lipa',
-    cover: '/sunset.jpg', 
-    src: '/sample-audio.mp3', 
+    cover: '/sunset.jpg',
+    src: '/sample-audio.mp3',
   };
 
   const [modalShow, setModalShow] = useState(false);
@@ -59,6 +66,95 @@ export default function Page() {
           <div className="main_content">
             <Header />
             <Container>
+              <div className="search_box search_page_bar">
+                <div className="search_filed">
+                  <input type="text" placeholder="Search music by keywords, phrases, add a link, or upload an audio file" />
+                </div>
+
+                <div className="right_search_itm">
+                  <div className="upload_dropdown_box">
+                    <button
+                      className="upload_btn">
+                      <img src="/img/upload_icon.svg" alt="upload" />
+                    </button>
+                  </div>
+
+                  <div className="switch_ask_anything">
+                    <span>Ask Me Anything</span>
+                    <div className="d-flex align-items-center gap-2">
+                      <div
+                        onClick={() => toggleSection("ask")}
+                        style={{
+                          width: "50px",
+                          height: "25px",
+                          borderRadius: "25px",
+                          background: activeSection === "ask" ? "#17DCF5" : "#ccc",
+                          position: "relative",
+                          cursor: "pointer",
+                          transition: "0.3s",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "23px",
+                            height: "23px",
+                            borderRadius: "50%",
+                            background: "#fff",
+                            position: "absolute",
+                            top: "1px",
+                            left: activeSection === "ask" ? "26px" : "1px",
+                            transition: "0.3s",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+              </div>
+
+             <div className="exmple_sec serchbar_exmple">
+               <div className="search_exmaple_select">
+               <div className="exmaple_select"> 
+                 <Form.Select >
+                  <option>Genre</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+               </div>
+                 <div className="exmaple_select"> 
+                 <Form.Select >
+                  <option>Mood</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+               </div>
+                 <div className="exmaple_select"> 
+                 <Form.Select >
+                  <option>Video Themes</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+               </div>
+                 <div className="exmaple_select"> 
+                 <Form.Select >
+                  <option>Instrument</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+               </div>
+              </div>
+              <button className="advance_filter_btn"   onClick={() => setModalShow(true)}>Advance Search<img src="/img/advance_filter.svg" alt="Previous" /></button>
+             </div>
+
+
               <div className="featured_sec">
                 <div className="align_justify">
                   <div className="main_title">
@@ -103,7 +199,7 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
+                      
                       >
                         <div className="album_img">
                           <img src="/img/album_img01.png" alt="Sacred Lands" />
@@ -130,7 +226,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img02.png" alt="Sunset Meditation" />
@@ -157,7 +252,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img03.png" alt="Healing Waters" />
@@ -184,7 +278,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img04.png" alt="Zen Garden" />
@@ -211,7 +304,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img05.png" alt="Spa & Wellness" />
@@ -236,7 +328,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img05.png" alt="Spa & Wellness" />
@@ -261,7 +352,6 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                        onClick={() => console.log("Open Modal")}
                       >
                         <div className="album_img">
                           <img src="/img/album_img05.png" alt="Spa & Wellness" />

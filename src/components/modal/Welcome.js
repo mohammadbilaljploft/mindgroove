@@ -29,7 +29,7 @@ export default function Welcome(props) {
                             contact us. We look forward to speaking with you!
                         </p>
 
-                        <button className="main_btn">Ok</button>
+                        <a href="/" className="main_btn">Ok</a>
 
                     </div>
 

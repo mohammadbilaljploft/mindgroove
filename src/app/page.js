@@ -74,8 +74,10 @@ export default function Home() {
     <>
 
       <div className="hero_banner_slider relative">
-        <HomeSidebar />
+        <div className="align_hd_sd">
+          <HomeSidebar />
         <Header />
+        </div>
 
         <Swiper
           slidesPerView={1}

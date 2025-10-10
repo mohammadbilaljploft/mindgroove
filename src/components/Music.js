@@ -164,6 +164,7 @@ export default function Music() {
                                 toggleLike(track.trackId);
                               }}
                               alt="Like"
+                               className="heart_img"
                             />
                           </div>
                         )}

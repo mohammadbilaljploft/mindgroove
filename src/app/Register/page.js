@@ -14,7 +14,7 @@ export default function Page() {
                         <Col lg={6} xl={5}>
                             <div className="">
                                 <div className="login_logo_img">
-                                    <img src="/img/logo_img01.svg" alt="Logo" />
+                                      <a href="/" ><img src="/img/logo_img01.svg" alt="Logo" /></a>
                                 </div>
 
                                 <Form className="form_sec justify-content-start">
@@ -171,9 +171,9 @@ export default function Page() {
                                     </div>
 
                                     <div className="form_field">
-                                        <button type="submit" className="main_btn w-100">
+                                        <a href="/my-accounts" type="submit" className="main_btn w-100">
                                             Let’s Do This!
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <div className="option_or">
@@ -188,7 +188,7 @@ export default function Page() {
                                     </div>
 
                                     <div className="dont_have_ac">
-                                        <span>Don’t have an account yet? <a href="">Create a new account</a></span>
+                                        <span> Already have an account? Sign in <a href="/login">Login</a></span>
                                     </div>
                                 </Form>
                             </div>

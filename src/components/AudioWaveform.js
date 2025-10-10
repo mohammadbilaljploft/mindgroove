@@ -67,10 +67,10 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
           <div className="border_bottom">
               <Nav variant="pills">
               <Nav.Item>
-                <Nav.Link eventKey="profile">My Profile</Nav.Link>
+                <Nav.Link eventKey="profile">Versions</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="playlist">My Playlist</Nav.Link>
+                <Nav.Link eventKey="playlist">Stems</Nav.Link>
               </Nav.Item>
             </Nav>
           </div>
@@ -99,8 +99,6 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                     </div>
 
                     <h6>{duration}</h6>
-                    <img src="/img/download_icon.svg" alt="Download" />
-                    <img src="/img/plus_icon.svg" alt="Add" />
                     <img
                       src={liked ? "/img/fill_heart.svg" : "/img/heart_icon.svg"}
                       onClick={(e) => {
@@ -109,7 +107,11 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                       }}
                       style={{ cursor: "pointer" }}
                       alt="Like"
-                    />
+                    />  
+                    <img src="/img/download_icon.svg" alt="Download" />
+                    <img src="/img/plus_icon.svg" alt="Add" />
+                    <img src="/img/share.svg" alt="Add" />
+                    
                   </div>
                 </div>
               </Tab.Pane>

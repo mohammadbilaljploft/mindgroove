@@ -15,7 +15,7 @@ export default function Page() {
                         <Col lg={6} xl={4}>
                             <div className="">
                                 <div className="login_logo_img">
-                                    <img src="/img/logo_img01.svg" alt="Logo" />
+                                      <a href="/" ><img src="/img/logo_img01.svg" alt="Logo" /></a>
                                 </div>
 
 
@@ -43,9 +43,9 @@ export default function Page() {
                               
 
                                     <div className="form_field">
-                                        <button type="submit" className="main_btn w-100">
+                                        <a href="/recovery-passoword" type="submit" className="main_btn w-100">
                                             Send Email
-                                        </button>
+                                        </a>
                                     </div>
 
                                 </Form>

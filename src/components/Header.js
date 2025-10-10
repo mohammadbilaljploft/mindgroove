@@ -149,7 +149,7 @@ export default function Header() {
                                             width: "50px",
                                             height: "25px",
                                             borderRadius: "25px",
-                                            background: activeSection === "ask" ? "#4caf50" : "#ccc",
+                                            background: activeSection === "ask" ? "#17DCF5" : "#ccc",
                                             position: "relative",
                                             cursor: "pointer",
                                             transition: "0.3s",
@@ -203,7 +203,7 @@ export default function Header() {
                                 <a href="">Discover</a>
                             </li>
                             <li>
-                                <a href="">Playlists</a>
+                                <a href="/search">Playlists</a>
                             </li>
                             <li>
                                 <a href="">Favorites</a>
@@ -215,7 +215,7 @@ export default function Header() {
                                 <a href="">Pricing</a>
                             </li>
                             <li>
-                                <a href="">Sign In</a>
+                                <a href="/login">Sign In</a>
                             </li>
                         </ul>
                     </div>

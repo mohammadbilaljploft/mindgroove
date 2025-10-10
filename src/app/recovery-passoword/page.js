@@ -16,7 +16,7 @@ export default function Page() {
             <Col lg={6} xl={4}>
               <div className="">
                 <div className="login_logo_img">
-                  <img src="/img/logo_img01.svg" alt="Logo" />
+                     <a href="/" ><img src="/img/logo_img01.svg" alt="Logo" /></a>
                 </div>
 
                 <Form className="form_sec">
