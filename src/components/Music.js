@@ -339,7 +339,7 @@ const handleArrowClick = () => {
           display: flex;
           gap: 5px;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-          z-index: 10;
+          z-index: 3;
         }
 
         .track-accordion {

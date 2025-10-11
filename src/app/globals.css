@@ -3611,7 +3611,7 @@ body.common-bg {
   width: 100%;
   left: 0;
   padding: 30px;
-  z-index: 99;
+  z-index: 9;
 }
 
 .down_arrow_player {
