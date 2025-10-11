@@ -4278,10 +4278,10 @@ body.common-bg {
     left: 450px;
 }
 .player_stoper_box img {
-    border-right: 1px solid #323232;
-    padding: 10px 15px;
-    width: 48px;
+    border-right: 1px solid rgb(50, 50, 50);
+    width: 40px;
     height: 40px;
+    padding: 10px;
 }
 .player_stoper_box img:last-child{
    border-right:unset ;
@@ -4289,7 +4289,7 @@ body.common-bg {
 
 @media (max-width:992px) {
   .player_stoper_box {
-    margin-bottom: 10px;
+    margin-bottom: 10px;  
 }
 .player_stoper_box {
     position: relative;
