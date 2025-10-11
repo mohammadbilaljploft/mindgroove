@@ -14,9 +14,9 @@ export default function Welcome(props) {
                 show={props.show}          
                 onHide={props.onHide}     
                 size="md"
-                aria-labelledby="contained-modal-title-vcenter"
+                aria-labelledby="contained-modal-title-vcenterc"
                 centered
-                className="common_modal "
+                className="common_modal wclme"
             >
                 <Modal.Header closeButton />
 

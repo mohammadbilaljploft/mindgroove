@@ -2562,14 +2562,20 @@ body.common-bg {
 }
 
 @media (max-width:992px) {
+  .form_sec{
+    padding-top: 30px;
+  }
+  .login .form_sec {
+    padding-top: 90px;
+}
 
   .registration_page::before {
     width: 100%;
   }
 
-  .form_sec {
+  /* .form_sec {
     height: 100%;
-  }
+  } */
 
   .login_logo_img img {
     padding-top: 50px;
@@ -2590,6 +2596,11 @@ body.common-bg {
 }
 
 /* login pages css end */
+
+.common_modal.wclme .main_btn {
+    width: 97.759px;
+
+}
 
 .common_modal .btn-close {
     color: #fff;

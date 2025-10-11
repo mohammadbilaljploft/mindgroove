@@ -9,7 +9,7 @@ export default function Page() {
 
     return (
         <>
-            <section className="registration_page">
+            <section className="registration_page login">
                 <Container>
                     <Row className="g-5 justify-content-center align-items-center">
                         <Col lg={6} xl={4}>
