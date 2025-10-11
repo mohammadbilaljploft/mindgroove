@@ -55,7 +55,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
     <div className="waveform_tabs_sec">
       <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
         <Row>
-          <Col lg={12}>
+          <Col lg={6}>
             <div className="border_bottom">
               <Nav variant="pills">
                 <Nav.Item>
@@ -67,6 +67,9 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
               </Nav>
             </div>
           </Col>
+
+          
+        
 
           <Col lg={12}>
             <Tab.Content>
@@ -110,6 +113,14 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
 
               {/* Stems Tab */}
               <Tab.Pane eventKey="playlist">
+                 <div className="player_stoper_box">
+              <img src="/img/play_list_icon01.svg" alt="" />
+              <img src="/img/play_list_icon02.svg" alt="" />
+              <img src="/img/play_list_icon03.svg" alt="" />
+              <img src="/img/play_list_icon04.svg" alt="" />
+              <img src="/img/play_list_icon05.svg" alt="" />
+              <img src="/img/play_list_icon06.svg" alt="" />
+          </div>
                 <div className="audio-waveform-container">
                   <div className="waveform_align column-layout">
                     <div className="control-info">

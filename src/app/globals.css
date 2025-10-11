@@ -774,6 +774,9 @@ input:focus {
 }
 
 @media (max-width: 992px) {
+  .search_box.search_page_bar{
+    margin-top: 20px;
+  }
 
   .header_sec .header_inner {
     justify-content: center;
@@ -3953,6 +3956,7 @@ body.common-bg {
 
 .track_sc .track-accordion {
   background: #323232 !important;
+  position: relative;
 }
 
 .track_sc .track-card.active .track-header .accordion-toggle {
@@ -4261,3 +4265,35 @@ body.common-bg {
 }
 
 /* album details banner css end */
+
+
+.player_stoper_box {
+    background: var(--Neutral-70);
+    border-radius: 30px;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 20px;
+    left: 450px;
+}
+.player_stoper_box img {
+    border-right: 1px solid #323232;
+    padding: 10px 15px;
+    width: 48px;
+    height: 40px;
+}
+.player_stoper_box img:last-child{
+   border-right:unset ;
+}
+
+@media (max-width:992px) {
+  .player_stoper_box {
+    margin-bottom: 10px;
+}
+.player_stoper_box {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+}
