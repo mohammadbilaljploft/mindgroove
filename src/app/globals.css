@@ -44,6 +44,11 @@ a {
   max-width: 1770px !important;
 }
 
+.g-5.justify-content-center.align-items-center{
+  position: relative;
+  z-index: 3;
+}
+
 .swiper {
   height: 100%;
   /* Make Swiper container fill its parent */
@@ -1450,7 +1455,7 @@ input:focus {
 
 .music_set_section.music-player .track-info h3 {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
 }
@@ -1879,7 +1884,7 @@ input:focus {
 
 @media (max-width: 992px) {
   .hero_banner_title h3 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 48px;
   }
 
@@ -2575,7 +2580,7 @@ body.common-bg {
   }
 
   .registration_page {
-    height: 100%;
+    overflow-y: auto;
     padding: 20px;
   }
 
