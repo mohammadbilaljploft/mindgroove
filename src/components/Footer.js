@@ -16,7 +16,7 @@ export default function Footer() {
             <footer className="footer_sec">
 
                 <Container>
-                    <Row className="g-5 ">
+                    <Row className="g-4">
                         <Col lg={6} md={6}>
                             <div className="footer_logo footer_title">
                                  <a href="/" ><img src="/img/footer_logo.png" alt="Logo" /></a>

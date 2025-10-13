@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function Page() {
   const [showAll, setShowAll] = useState(false);
 
-  // All images
+  // All gallery images
   const images = [
     "/img/abt_img01.png",
     "/img/abt_img02.png",
@@ -21,26 +21,27 @@ export default function Page() {
     "/img/abt_img07.png",
     "/img/abt_img08.png",
     "/img/abt_img05.png",
-    "/img/abt_img07.png",
+    "/img/abt_img03.png",
+    "/img/abt_img01.png",
+    "/img/abt_img05.png",
   ];
 
+  // Initially show 8 images
   const imagesToShow = showAll ? images : images.slice(0, 8);
 
-  // Variants for container (stagger children)
+  // Framer Motion Variants
   const containerVariants = {
     hidden: {},
     visible: {
-      transition: { staggerChildren: 0.2 },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
-  // Variants for cards / images
   const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  // Variants for text sections
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -50,8 +51,10 @@ export default function Page() {
     <>
       {/* Hero Banner */}
       <div className="hero_banner_innerpage about_us_banner">
-        <HomeSidebar />
-        <Header />
+        <div className="align_hd_sd">
+          <HomeSidebar />
+          <Header />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +62,9 @@ export default function Page() {
           className="inner_banner_title"
         >
           <span>-Subscription</span>
-          <h2>Sound unchained. <br /> Music, redefined.</h2>
+          <h2>
+            Sound unchained. <br /> Music, redefined.
+          </h2>
         </motion.div>
       </div>
 
@@ -85,13 +90,18 @@ export default function Page() {
               <Col lg={8}>
                 <motion.div variants={cardVariants} className="about_xt">
                   <h5>
-                    In 2021, our founders envisioned the evolving landscape of digital sound and recognized the transformative power of music technology. They set out to build a platform where creativity meets code — a space that empowers artists, producers, and labels to amplify their sound through digital innovation.
+                    In 2021, our founders envisioned the evolving landscape of digital sound and recognized the
+                    transformative power of music technology. They set out to build a platform where creativity meets
+                    code — a space that empowers artists, producers, and labels to amplify their sound through digital
+                    innovation.
                   </h5>
                   <p>
-                    They launched one of France’s first dedicated music-tech platforms, redefining how music is shared, marketed, and experienced online.
+                    They launched one of France’s first dedicated music-tech platforms, redefining how music is shared,
+                    marketed, and experienced online.
                   </p>
                   <p>
-                    Today, we stand as an award-winning music-driven digital agency, backed by a passionate team committed to elevating the way music connects with the world.
+                    Today, we stand as an award-winning music-driven digital agency, backed by a passionate team
+                    committed to elevating the way music connects with the world.
                   </p>
                 </motion.div>
               </Col>
@@ -103,7 +113,7 @@ export default function Page() {
       {/* Artists Stats */}
       <section className="sec_pad">
         <Container>
-          <Row className="g-5">
+          <Row className="g-4">
             <Col lg={8}>
               <motion.div
                 initial="hidden"
@@ -116,7 +126,9 @@ export default function Page() {
                   Some of The Most Famous <br /> <span>Artists</span> Of All Time in the <br /> world
                 </h2>
                 <p>
-                  World music is an easy way for people to describe the melding traditional and nontraditional music <br /> from foreign countries. Generally, world music refers to sounds from the non-Western part of the world.
+                  World music is an easy way for people to describe the melding traditional and nontraditional music{" "}
+                  <br /> from foreign countries. Generally, world music refers to sounds from the non-Western part of
+                  the world.
                 </p>
               </motion.div>
             </Col>
@@ -152,7 +164,13 @@ export default function Page() {
             variants={containerVariants}
             className="gallery_sec"
           >
-            <motion.div className="gallery_inner" variants={containerVariants}>
+            <motion.div
+              key={showAll ? "all" : "partial"} // triggers re-render on state change
+              className="gallery_inner"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {imagesToShow.map((src, index) => (
                 <motion.div key={index} className="gallery_img" variants={cardVariants}>
                   <img src={src} alt={`Gallery ${index + 1}`} />
@@ -161,16 +179,18 @@ export default function Page() {
             </motion.div>
 
             {!showAll && (
-              <motion.button
-                className="main_btn explore_btn"
-                onClick={() => setShowAll(true)}
-                variants={cardVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>Explore Artist</span>
-                <img src="/img/fi-rr-arrow-right.svg" alt="Arrow" />
-              </motion.button>
+              <div className="center_pos">
+                <motion.button
+                  className="main_btn explore_btn"
+                  onClick={() => setShowAll(true)}
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span>Explore Artist</span>
+                  <img src="/img/fi-rr-arrow-right.svg" alt="Arrow" />
+                </motion.button>
+              </div>
             )}
           </motion.div>
         </Container>

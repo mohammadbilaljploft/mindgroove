@@ -348,8 +348,7 @@ export default function Home() {
 
       <section className="sec_pad">
         <Container>
-          <div className="main_title">
-
+          <div className="">
             <div className="main_title align_justify">
               <h2>New Release</h2>
               <button className="view-all-btn">
