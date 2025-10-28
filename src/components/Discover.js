@@ -39,43 +39,24 @@ export default function Discover() {
   };
 
   return (
-    <section className='sec_pad'>
+    <section className='sec_pad featured_sec02'>
       <Container>
         <div className="main_title align_justify">
-          <h2>Discover</h2>
-          <button className="view-all-btn">
-            <span className="btn-text">View All</span>
-            <span className="circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </span>
-          </button>
+          <h2>Featured Tracks</h2>
         </div>
 
         <div className="music-player music_set_section">
           <Row className='item_discover g-4'>
-            <Col lg={3}>
+            {/* <Col lg={3}>
               <div className="album-cover">
                 <img
                   src="/img/album_cover.png"
                   alt="Album Cover"
                 />
               </div>
-            </Col>
+            </Col> */}
 
-            <Col lg={9}>
+            <Col lg={12}>
               {/* Motion container for staggered scroll animation */}
               <motion.div
                 className="tracks-section"
@@ -100,9 +81,10 @@ export default function Discover() {
                     </div>
 
                     <div className="track-actions">
-                      <button onClick={() => toggleLike(track.id)}>
+                      <img src="img/more.svg" alt="" />
+                      {/* <button onClick={() => toggleLike(track.id)}>
                         <Heart className={track.liked ? 'liked' : ''} />
-                      </button>
+                      </button> */}
                       <span className="track-duration">{track.duration}</span>
                     </div>
                   </motion.div>

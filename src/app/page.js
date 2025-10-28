@@ -19,6 +19,7 @@ export default function Home() {
   const nextRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null);
 
+  
   useEffect(() => {
     if (swiperInstance) {
       // Assign refs after Swiper is initialized
@@ -68,6 +69,12 @@ export default function Home() {
   }, []);
 
 
+  const prevButtonRef = useRef(null);
+  const nextButtonRef = useRef(null);
+  const [perfectTrackSwiper, setPerfectTrackSwiper] = useState(null);
+
+  const perfectTrackSlides = [1, 2, 3];
+
 
   return (
 
@@ -76,7 +83,7 @@ export default function Home() {
       <div className="hero_banner_slider relative">
         <div className="align_hd_sd">
           <HomeSidebar />
-        <Header />
+          <Header />
         </div>
 
         <Swiper
@@ -96,7 +103,7 @@ export default function Home() {
           }}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
           className="hero_swipper"
-          
+
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide}>
@@ -166,15 +173,16 @@ export default function Home() {
               >
                 <div className="album_img">
                   <img src={album.img} alt={album.title} />
+                  <button>
+                    <img src="/img/play_icon02.svg" className="playicon" />
+                  </button>
                 </div>
                 <div className="album_cart_content">
                   <div className="cart_text">
                     <h4>{album.title}</h4>
                     <span>{album.sub}</span>
                   </div>
-                  <button>
-                    <img src="/img/play_icon.svg" />
-                  </button>
+
                 </div>
               </motion.div>
             ))}
@@ -182,9 +190,127 @@ export default function Home() {
         </Container>
       </section>
 
+      <section className="featured_sec sec_pad music_categores_sec">
+        <Container>
+          <div className="main_title align_justify">
+            <h2>Explore Endless Music Categories </h2>
+            <button className="view-all-btn">
+              <span className="btn-text">View All</span>
+              <span className="circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div className="album_cart_sec">
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/music_category_img01.png" alt="Album 1" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Spiritual Healing</h4>
+                  <span>Spiritual healing music can include genres like meditation, ambient, classical, world fusion, sacred music, and experimental electronic</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/music_category_img02.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Dance Yoga</h4>
+                  <span>Dance yoga music fuses energizing genres such as world beats, pop, Bollywood, electronic, and instrumental </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/music_category_img03.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Nature Sounds</h4>
+                  <span>Nature sounds music typically includes pure natural recordings or blends of sounds like water flowing, thunder, forest ambience</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/music_category_img04.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Meditation Retreat</h4>
+                  <span>Meditation retreat music consists of soothing instrumental, ambient, and nature-inspired tracks crafted to create a peaceful environment</span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </Container>
+      </section>
 
 
-      <section className="music_categores_sec ">
+
+
+
+
+      {/* <section className="music_categores_sec ">
         <Container>
 
           <div className="align_justify">
@@ -206,7 +332,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Motion wrapper for animation */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -343,9 +468,147 @@ export default function Home() {
 
           </motion.div>
         </Container>
+      </section> */}
+
+
+
+      <section className="featured_sec sec_pad ">
+        <Container>
+          <div className="main_title align_justify">
+            <h2>New Release </h2>
+            <button className="view-all-btn">
+              <span className="btn-text">View All</span>
+              <span className="circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div className="album_cart_sec">
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/realease_img01.png" alt="Album 1" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Relaxing</h4>
+                  <span>Ancestral Roots</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/realease_img02.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Sunset Meditation</h4>
+                  <span>Calm Flow</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/realease_img03.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Yoga Music</h4>
+                  <span>Calm Flow</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/realease_img04.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Wellness</h4>
+                  <span>Ki Yoga & Okido</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="album_cart"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+            >
+              <div className="album_img">
+                <img src="/img/realease_img05.png" alt="Album 2" />
+                <button>
+                  <img src="/img/play_icon02.svg" className="playicon" />
+                </button>
+              </div>
+              <div className="album_cart_content">
+                <div className="cart_text">
+                  <h4>Spa & Wellness</h4>
+                  <span>Calm Flow</span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </Container>
       </section>
 
-
+      {/* 
       <section className="sec_pad">
         <Container>
           <div className="">
@@ -430,14 +693,14 @@ export default function Home() {
 
           </div>
         </Container>
-      </section>
+      </section> */}
 
 
 
       <Discover />
 
 
-      <section className="sec_pad testimonial_sc">
+      {/* <section className="sec_pad testimonial_sc">
         <Container>
           <div className="align_justify ">
             <div className="main_title aling_title">
@@ -538,22 +801,71 @@ export default function Home() {
           </Swiper>
 
         </Container>
-      </section>
+      </section> */}
 
-      <section className="sec_pad">
-        <Container>
-          <div className="perfect_track_box">
-            <div className="perfect_track_text">
-              <h3>How to Find the <br /> perfect track</h3>
-              <p>Tips & tricks for searching.</p>
-              <a href="" className="main_btn">Find out more</a>
+       <section className="feature_sc">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        modules={[Pagination, Navigation, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation={{
+          prevEl: prevButtonRef.current,
+          nextEl: nextButtonRef.current,
+        }}
+        onSwiper={(swiper) => {
+          setPerfectTrackSwiper(swiper);
+          // Fix navigation refs after swiper init
+          setTimeout(() => {
+            if (swiper.params.navigation) {
+              swiper.params.navigation.prevEl = prevButtonRef.current;
+              swiper.params.navigation.nextEl = nextButtonRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }
+          });
+        }}
+        className="perfect_swipper"
+      >
+        {perfectTrackSlides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="perfect_track_box">
+              <div className="perfect_track_text">
+                <h3>
+                  How to Find the perfect track
+                </h3>
+                <p>Tips & tricks for searching.</p>
+                <a href="#" className="main_btn">
+                  Find out more
+                </a>
+              </div>
             </div>
-          </div>
-        </Container>
-      </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
+      <div className="csm_navigation">
+        <div
+          ref={prevButtonRef}
+          className="custom-prev absolute top-1/2 left-4 -translate-y-1/2 z-20 cursor-pointer"
+        >
+          <img src="/img/arrow_left.svg" alt="" />
+        </div>
+        <div
+          ref={nextButtonRef}
+          className="custom-next absolute top-1/2 right-4 -translate-y-1/2 z-20 cursor-pointer"
+        >
+          <img src="/img/arrow_right.svg" alt="" />
+        </div>
+      </div>
+    </section>
 
-      <Footer />
+<div className="home_footer">
+      <Footer  />
+</div>
 
     </>
 

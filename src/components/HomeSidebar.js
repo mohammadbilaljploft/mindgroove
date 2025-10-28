@@ -1,32 +1,68 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Form } from "react-bootstrap";
 
 export default function HomeSidebar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const isMobile = () => window.innerWidth < 992;
 
-    return (
+  const handleClose = () => {
+    if (isMobile()) {
+      document.body.classList.add("sidebar-open"); // Mobile: reverse behavior
+    } else {
+      setIsSidebarOpen(false); // Desktop: normal close
+    }
+  };
+
+  const handleOpen = () => {
+    if (isMobile()) {
+      document.body.classList.remove("sidebar-open"); // Mobile: reverse behavior
+    } else {
+      setIsSidebarOpen(!isSidebarOpen); // Desktop: toggle
+    }
+  };
+
+  // Sync desktop state with body class
+  useEffect(() => {
+    if (!isMobile()) {
+      if (isSidebarOpen) {
+        document.body.classList.add("sidebar-open");
+      } else {
+        document.body.classList.remove("sidebar-open");
+      }
+    }
+  }, [isSidebarOpen]);
+
+  return (
     <>
-    
-  <div className="sidebar_box">
 
-      <div className="logo_img">
-       <a href="/" ><img src="/img/logo_home_sidebar.svg" /></a>
-    </div>
+      <div className="sidebar_box">
+        <button className="crose_sidebar" onClick={handleClose}>
+          <img src="/img/arrow_sidebar.svg" alt="Close Sidebar" />
+        </button>
 
-    <div className="sidebar_menu">
-        <a href="/search" ><img src="/img/sidebar_icon01.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon02.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon03.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon04.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon05.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon06.svg" /></a>
-        <a href="" ><img src="/img/sidebar_icon07.svg" /></a>
-    </div>
+        <div className="sidebar_inner">
+          <div className="sidebar_toggle">
+            <button className="sidebar_open" onClick={handleOpen}>
+              <img src="/img/sidebar_toggle.svg" alt="Open Sidebar" />
+            </button>
+          </div>
 
-  </div>
+          <div className="sidebar_menu">
+            <a href="" ><img src="/img/discover_icon.svg" />Discover</a>
+            <a href="" ><img src="/img/filter_icon.svg" />Filters</a>
+            <a href="" ><img src="/img/playlist_icon.svg" />Playlists</a>
+            <a href="" ><img src="/img/favourites_icon.svg" />Favourites</a>
+            <a href="" ><img src="/img/mixes_icon.svg" />My Mixes</a>
+            <a href="" ><img src="/img/video_icon.svg" />Video Editor</a>
+            <a href="" ><img src="/img/project_icon.svg" />Projects</a>
+          </div>
+        </div>
 
-    
+      </div>
+
+
     </>
-    );
+  );
 }

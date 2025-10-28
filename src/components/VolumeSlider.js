@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { Volume2 } from 'lucide-react';
+import React, { useState } from "react";
+import { Volume2 } from "lucide-react";
 
-
-
-const VolumeSlider = () => {
-
+const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B" }) => {
   const [volume, setVolume] = useState(60);
 
   const handleVolumeChange = (event) => {
@@ -14,10 +11,13 @@ const VolumeSlider = () => {
   const fillPercentage = `${volume}%`;
 
   return (
-    <div className="volume_slider_item">
-      <Volume2 className="text-white h-6 w-6" />
+    <div
+      className="volume_item max-w-[200px]"
+      style={{ minWidth: "100px" }}
+    >
+      <Volume2 className="text-white h-5 w-5 flex-shrink-0" />
 
-      <div className="relative flex-grow h-2">
+      <div className="relative flex-grow h-[6px]">
         <input
           type="range"
           min="0"
@@ -25,21 +25,19 @@ const VolumeSlider = () => {
           step="1"
           value={volume}
           onChange={handleVolumeChange}
-          className="w-full h-2 cursor-pointer appearance-none bg-transparent"
+          className="w-full h-[6px] cursor-pointer appearance-none bg-transparent"
           style={{
-            '--fill-color': '#00BFFF', // Cyan color for the filled track
-            '--track-color': '#6B7280', // Gray color for the unfilled track
-            '--thumb-color': '#00BFFF', // Cyan color for the thumb
-            '--fill-percentage': fillPercentage,
+            "--fill-color": thumbColor, 
+            "--track-color": trackColor,
+            "--thumb-color": thumbColor, 
+            "--fill-percentage": fillPercentage,
           }}
         />
 
-        {/* This div is for visual effect to mimic the solid filled track */}
         <style jsx>{`
-          /* Custom styling for WebKit (Chrome, Safari) browsers */
-          input[type='range']::-webkit-slider-runnable-track {
+          input[type="range"]::-webkit-slider-runnable-track {
             width: 100%;
-            height: 8px;
+            height: 6px;
             cursor: pointer;
             background: linear-gradient(
               to right,
@@ -48,23 +46,26 @@ const VolumeSlider = () => {
               var(--track-color) var(--fill-percentage),
               var(--track-color) 100%
             );
-            border-radius: 4px;
+            border-radius: 10px;
           }
 
-          input[type='range']::-webkit-slider-thumb {
+          input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 16px;
-            width: 16px;
+            height: 14px;
+            width: 14px;
             border-radius: 50%;
             background: var(--thumb-color);
             cursor: pointer;
-            margin-top: -4px; /* Adjust to vertically center the thumb on the track */
-            border: 2px solid #fff; /* White border for the glow effect */
-            box-shadow: 0 0 0 4px var(--thumb-color); /* The outer cyan circle */
+            margin-top: -4px;
+            border: none;
+            transition: transform 0.2s ease, background 0.3s ease;
           }
 
-          /* Custom styling for Firefox browsers (less complex but different properties) */
-          input[type='range']::-moz-range-track {
+          input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+          }
+
+          input[type="range"]::-moz-range-track {
             background: linear-gradient(
               to right,
               var(--fill-color) 0%,
@@ -72,17 +73,16 @@ const VolumeSlider = () => {
               var(--track-color) var(--fill-percentage),
               var(--track-color) 100%
             );
-            height: 8px;
-            border-radius: 4px;
+            height: 6px;
+            border-radius: 10px;
           }
-          
-          input[type='range']::-moz-range-thumb {
+
+          input[type="range"]::-moz-range-thumb {
             background: var(--thumb-color);
-            border: 2px solid #fff;
-            height: 16px;
-            width: 16px;
+            height: 14px;
+            width: 14px;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px var(--thumb-color);
+            border: none;
           }
         `}</style>
       </div>

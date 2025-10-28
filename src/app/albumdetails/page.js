@@ -64,7 +64,7 @@ export default function Page() {
 
     return (
         <>
-            <div className="">
+            <div className="search_bg album_pg">
                 <div className="inner_pages">
                     <div className="inner_pages_sidebar">
                         <HomeSidebar />

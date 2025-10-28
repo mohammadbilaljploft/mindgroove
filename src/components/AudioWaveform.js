@@ -55,7 +55,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
     <div className="waveform_tabs_sec">
       <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
         <Row>
-          <Col lg={6}>
+          <Col lg={12}>
             <div className="border_bottom">
               <Nav variant="pills">
                 <Nav.Item>

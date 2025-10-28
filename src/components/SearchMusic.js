@@ -5,7 +5,7 @@ import { usePlayer } from "./PlayerContext";
 import { useState, useEffect } from "react";
 import AudioWaveform from "./AudioWaveform";
 
-export default function Music() {
+export default function SearchMusic() {
   const { playTrack, currentTrack } = usePlayer();
   const [likedTracks, setLikedTracks] = useState([]);
   const [expandedTrack, setExpandedTrack] = useState(null);
@@ -98,7 +98,7 @@ const handleArrowClick = () => {
 };
 
   return (
-    <section className="sec_pad track_sc ">
+    <section className="sec_pad track_sc search_play_list">
       <button className="down_arrow_player" onClick={handleArrowClick}>
         <img src="/img/down_arrow.svg" />
       </button>
@@ -118,6 +118,7 @@ const handleArrowClick = () => {
         <span>Mood</span>
         <span>BPM</span>
         <span>Stems</span>
+
       </div>
 
       <div className="track-list">
@@ -166,7 +167,7 @@ const handleArrowClick = () => {
                         toggleAccordion(track.trackId);
                       }}
                     >
-                      <FaChevronDown />
+                      {/* <FaChevronDown /> */}
                     </span>
                   </div>
 
@@ -175,9 +176,10 @@ const handleArrowClick = () => {
                   <span>{track.genre}</span>
                   <span>{track.mood}</span>
                   <span>{track.bpm}</span>
+                
 
                   <div className="track-right">
-                     <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" />
+                    <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" />
                     <div className="track-menu-wrapper">
                       <img
                         src="/img/menu_icon.svg"
@@ -190,6 +192,7 @@ const handleArrowClick = () => {
                       />
                       {(isDesktop || isMenuOpen) && (
                         <div className="track-menu-dropdown">
+                  
                           <img src="/img/info_icon.svg" alt="Info" />
                           <img src="/img/download_icon.svg" alt="Download" />
                           <img src="/img/plus_icon.svg" alt="Add" />
@@ -215,10 +218,7 @@ const handleArrowClick = () => {
                 {/* Accordion content */}
                 {isExpanded && (
                   <div className="track-accordion">
-                    <AudioWaveform
-                      liked={isLiked}
-                      onToggleLike={() => toggleLike(track.trackId)}
-                    />
+                  
                     <div className="player_pitch">
                       <div className="music_min">
                         <h6>GENRE</h6>
@@ -338,7 +338,7 @@ const handleArrowClick = () => {
           padding: 5px;
           border-radius: 5px;
           display: flex;
-          gap: 5px;
+          gap: 10px;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
           z-index: 3;
         }

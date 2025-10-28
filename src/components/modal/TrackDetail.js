@@ -23,10 +23,10 @@ export default function TrackDetail(props) {
                             <div className="tracklist_deatils_text">
                                 <h3>Sunset</h3>
                                 <p>Tate McRae, Nightmares, The Neighbourhood, Doja Cat and more...</p>
-                                <ul className="bullet_list">
+                                {/* <ul className="bullet_list">
                                     <li>20 songs</li>
                                     <li>1h 36m</li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                     </div>
@@ -51,14 +51,14 @@ export default function TrackDetail(props) {
                                 <Col sm={12}>
                                     <Tab.Content>
                                         <Tab.Pane eventKey="first">
-                                            <Row className="g-4">
-                                                <Col lg={4}>
+                                            <Row className="">
+                                                <Col lg={12}>
                                                     <div className="music_min_bx border_effect">
-                                                        <div className="music_min">
+                                                        <div className="music_min label_green_text">
                                                             <h6>LABEL</h6>
                                                             <span>HYPE MUSIC</span>
                                                         </div>
-                                                        <div className="music_min">
+                                                        <div className="music_min label_green_text">
                                                             <h6>GENRE</h6>
                                                             <span>HIP HOP</span>
                                                         </div>
@@ -71,7 +71,7 @@ export default function TrackDetail(props) {
                                                         </div>
                                                     </div>
                                                 </Col>
-                                                <Col lg={4}>
+                                                <Col lg={12}>
                                                     <div className="music_min_bx border_effect">
                                                         <div className="music_min">
                                                             <h6>MOODS</h6>
@@ -90,7 +90,7 @@ export default function TrackDetail(props) {
                                                         </div>
                                                     </div>
                                                 </Col>
-                                                <Col lg={4}>
+                                                <Col lg={12}>
                                                     <div className="music_min_bx">
 
 
@@ -111,12 +111,15 @@ export default function TrackDetail(props) {
                                                     </div>
                                                 </Col>
                                             </Row>
+                                                <div className="download_lyrics new_down">
+                                              <button> <img src="/img/copy_icon012.svg" alt="" />Copy Lyrics</button>
+                                          </div>
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="second">
 
-                                            <Row>
-                                                <Col lg={4}>
-                                                    <div className="border_effect publishing_box">
+                                            <Row className="g-3">
+                                                <Col lg={12}>
+                                                    <div className=" publishing_box border_b">
                                                         <h6>COMPOSERS</h6>
                                                         <div className="publishing_box_inner">
                                                             <div className="publishing_title">
@@ -131,7 +134,7 @@ export default function TrackDetail(props) {
                                                     </div>
                                                 </Col>
                                                    
-                                                      <Col lg={4}>
+                                                      <Col lg={12}>
                                                     <div className=" publishing_box border_effect">
                                                         <h6>ORIGINAL PUBLISHER</h6>
                                                         <div className="publishing_box_inner">
@@ -139,26 +142,30 @@ export default function TrackDetail(props) {
                                                                 <h3>KPM MUSIC LTD</h3>
                                                                 <span>PRS: 207982747, 100%</span>
                                                             </div>
-                                                            <div className="publishing_title">
-                                                                <h3>JEAN-LUC LABASSE</h3>
-                                                                <span>ASCAP: 759087693, 50%</span>
-                                                            </div>
+                                                          
                                                         </div>
                                                     </div>
                                                 </Col>
-                                                   <Col lg={4}>
+                                                   <Col lg={12}>
                                                     <div className=" publishing_box">
-                                                        
+                                                           <h6>ISWC</h6>
                                                         <div className="publishing_box_inner">
                                                             <div className="publishing_title">
-                                                                <h6>ISWC</h6>
                                                                 <h3>T3303919446</h3>
                                                             </div>
-                                                           <div className="publishing_title">
-                                                                <h6>ISRC</h6>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </Col>
+                                                   <Col lg={12}>
+                                                    <div className=" publishing_box">
+                                                           <h6>ISRC</h6>
+                                                        <div className="publishing_box_inner">
+                                                            <div className="publishing_title">
                                                                 <h3>GBBPP2406585</h3>
                                                             </div>
                                                         </div>
+                                                       
                                                     </div>
                                                 </Col>
                                             </Row>

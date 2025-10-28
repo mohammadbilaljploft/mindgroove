@@ -5,7 +5,6 @@ import HomeSidebar from "@/components/HomeSidebar";
 import { motion } from "framer-motion";
 import { Container, Form } from "react-bootstrap";
 import TrackDetail from "@/components/modal/TrackDetail";
-import Music from "@/components/Music";
 import { PlayerProvider } from "@/components/PlayerContext";
 import PlayerBox from "@/components/PlayerBox";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +12,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import SearchMusic from "@/components/SearchMusic";
 
 
 export default function Page() {
@@ -64,7 +64,7 @@ export default function Page() {
           </div>
 
           <div className="main_content">
-            <Header />
+      <Header />      
             <Container>
               <div className="search_box search_page_bar">
                 <div className="search_filed">
@@ -116,59 +116,53 @@ export default function Page() {
 
               </div>
 
-             <div className="exmple_sec serchbar_exmple">
-               <div className="search_exmaple_select">
-               <div className="exmaple_select"> 
-                 <Form.Select >
-                  <option>Genre</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </Form.Select>
-               </div>
-                 <div className="exmaple_select"> 
-                 <Form.Select >
-                  <option>Mood</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </Form.Select>
-               </div>
-                 <div className="exmaple_select"> 
-                 <Form.Select >
-                  <option>Video Themes</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </Form.Select>
-               </div>
-                 <div className="exmaple_select"> 
-                 <Form.Select >
-                  <option>Instrument</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </Form.Select>
-               </div>
+              <div className="exmple_sec serchbar_exmple">
+                <div className="search_exmaple_select">
+                  <div className="exmaple_select">
+                    <Form.Select >
+                      <option>Genre</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="exmaple_select">
+                    <Form.Select >
+                      <option>Mood</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="exmaple_select">
+                    <Form.Select >
+                      <option>Video Themes</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                  <div className="exmaple_select">
+                    <Form.Select >
+                      <option>Instrument</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </Form.Select>
+                  </div>
+                </div>
+                <button className="advance_filter_btn" onClick={() => setModalShow(true)}>Advance Search<img src="/img/advance_filter.svg" alt="Previous" /></button>
               </div>
-              <button className="advance_filter_btn"   onClick={() => setModalShow(true)}>Advance Search<img src="/img/advance_filter.svg" alt="Previous" /></button>
-             </div>
 
 
-              <div className="featured_sec">
-                <div className="align_justify">
-                  <div className="main_title">
-                    <h2>Albums <span>(800+ RESULTS)</span></h2>
-                  </div>
-
-                  <div className="swiper_nav_btns ctm_btn circle_btn" >
-                    <button className="swiper-button-prev custom_prev">
-                      <img src="/img/left_arrow.svg" alt="Previous" />
-                    </button>
-                    <button className="swiper-button-next custom_next">
-                      <img src="/img/right_arrow.svg" alt="Next" />
-                    </button>
-                  </div>
+              <div className="featured_sec features_inner">
+                <div className="swiper_nav_btns ctm_btn circle_btn" >
+                  <button className="swiper-button-prev custom_prev">
+                    <img src="/img/left_arrow.svg" alt="Previous" />
+                  </button>
+                  <button className="swiper-button-next custom_next">
+                    <img src="/img/right_arrow.svg" alt="Next" />
+                  </button>
                 </div>
                 <div className="album_cart_sec ">
                   <Swiper
@@ -199,19 +193,22 @@ export default function Page() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={cardVariants}
                         style={{ cursor: "pointer" }}
-                      
+
                       >
                         <div className="album_img">
-                          <img src="/img/album_img01.png" alt="Sacred Lands" />
+                           <img src="/img/album_img01.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Sacred Lands</h4>
                             <span>Ancestral Roots</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -228,16 +225,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img02.png" alt="Sunset Meditation" />
+                           <img src="/img/album_img02.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Sunset Meditation</h4>
                             <span>Calm Flow</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -254,16 +254,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img03.png" alt="Healing Waters" />
+                           <img src="/img/album_img03.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Healing Waters</h4>
                             <span>Calm Flow</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -280,16 +283,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img04.png" alt="Zen Garden" />
+                           <img src="/img/album_img04.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Zen Garden</h4>
                             <span>Ki Yoga & Okido</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -306,16 +312,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img05.png" alt="Spa & Wellness" />
+                           <img src="/img/album_img01.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Spa & Wellness</h4>
                             <span>Calm Flow</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -330,16 +339,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img05.png" alt="Spa & Wellness" />
+                           <img src="/img/album_img02.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Spa & Wellness</h4>
                             <span>Calm Flow</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -354,16 +366,19 @@ export default function Page() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="album_img">
-                          <img src="/img/album_img05.png" alt="Spa & Wellness" />
+                           <img src="/img/album_img03.png" alt="" />
+                          <button>
+                            <img src="/img/play_icon02.svg" className="playicon" />
+                          </button>
                         </div>
                         <div className="album_cart_content">
                           <div className="cart_text">
                             <h4>Spa & Wellness</h4>
                             <span>Calm Flow</span>
                           </div>
-                          <button>
+                          {/* <button>
                             <img src="/img/play_icon.svg" alt="Play" />
-                          </button>
+                          </button> */}
                         </div>
                       </motion.div>
                     </SwiperSlide>
@@ -372,13 +387,14 @@ export default function Page() {
                   {/* Custom Navigation Buttons */}
 
                 </div>
+
               </div>
 
 
 
 
               <PlayerProvider>
-                <Music />
+                <SearchMusic />
                 <PlayerBox />
               </PlayerProvider>
             </Container>
