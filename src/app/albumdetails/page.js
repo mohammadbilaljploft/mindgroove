@@ -72,7 +72,7 @@ export default function Page() {
 
                     <div className="main_content">
                         <Header />
-                        <Container>
+                        <Container fluid>
                             <div className="album_details_banner">
                                 <div className="album_content_box">
                                     <div className="album_img">

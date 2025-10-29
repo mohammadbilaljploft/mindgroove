@@ -65,7 +65,7 @@ export default function Page() {
 
           <div className="main_content">
            <Header />      
-            <Container>
+            <Container fluid>
               <div className="search_box search_page_bar">
                 <div className="search_filed">
                   <input type="text" placeholder="Search music by keywords, phrases, add a link, or upload an audio file" />
