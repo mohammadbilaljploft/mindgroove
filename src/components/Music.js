@@ -349,6 +349,7 @@ const handleArrowClick = () => {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          margin-top: -3px;
         }
 
         @media (max-width: 767px) {

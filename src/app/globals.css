@@ -745,6 +745,22 @@ input:focus {
 }
 
 @media (max-width: 1200px) {
+  .right_navbar ul li .dropdown {
+    text-align: start;
+    background: none;
+    border-radius: 0;
+    justify-content: start;
+    align-items: start;
+    padding: 0;
+    position: relative;
+    left: 0;
+    margin-top: 12px;
+    
+}
+
+  .right_navbar ul li .dropdown li a {
+    color: #fff;
+  }
   .toggle_btn {
     display: block;
     z-index: 9;
@@ -814,7 +830,6 @@ input:focus {
   .right_navbar ul li {
     width: 100%;
     text-align: center;
-    padding: 11px 0;
   }
 
   .right_navbar ul li:last-child {
@@ -834,31 +849,20 @@ input:focus {
   }
 
   .search_box .search_filed .search_itm_list {
-    background: rgb(30 30 30 / 87%);
+    background: rgb(30 30 30 / 95%);
   }
 
   .upload_dropdown_box .similar_search {
-    background: rgb(30 30 30 / 87%);
+    background: rgb(30 30 30 / 95%);
   }
 
   .switch_ask_anything .promp_list {
-    background: rgb(30 30 30 / 87%);
+    background: rgb(30 30 30 / 95%);
   }
 
-  .right_navbar ul li .dropdown li a {
-    color: #fff;
-  }
 
-  .right_navbar ul li .dropdown {
-    background: transparent;
-    border-radius: 0;
-    align-items: start;
-    padding: 0;
-    position: relative;
-    justify-content: start;
-    left: 0;
-    text-align: start;
-  }
+
+
 
   .search_box.search_page_bar {
     margin-top: 20px;
@@ -4630,6 +4634,8 @@ body.common-bg {
   border-radius: 5px;
   background: rgba(30, 30, 30, 0.60);
   padding: 0px 15px 0px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .track_sc .track-card.active .track-header {

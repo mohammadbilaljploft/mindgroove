@@ -249,7 +249,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
 
         @media (max-width: 576px) {
           .waveform-viz {
-            height: 50px;
+            height: 100px;
           }
         }
       `}</style>
