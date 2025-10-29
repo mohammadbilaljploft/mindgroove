@@ -3247,7 +3247,7 @@ body.common-bg {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 613px;
+  height: 901px;
   position: relative;
 }
 
@@ -3262,10 +3262,10 @@ body.common-bg {
 }
 
 .inner_banner_title {
-  z-index: 1;
-  position: absolute;
-  bottom: 40px;
-  left: 200px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 200px;
 }
 
 .inner_banner_title span {
@@ -3407,6 +3407,9 @@ body.common-bg {
     line-height: 36px;
   }
 
+  .hero_banner_innerpage {
+    height: 613px;
+}
   .inner_banner_title span {
     font-size: 22px;
 

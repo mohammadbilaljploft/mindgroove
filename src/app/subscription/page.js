@@ -27,8 +27,10 @@ export default function Page() {
   return (
     <>
       <div className="hero_banner_innerpage">
-        <HomeSidebar />
-        <Header />
+   <div className="align_hd_sd">
+          <HomeSidebar />
+          <Header />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: -50 }}
