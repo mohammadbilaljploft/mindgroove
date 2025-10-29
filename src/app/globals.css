@@ -262,10 +262,10 @@ button {
   height: 20px;
 } */
 
-.search_bg .menu_text {
+/* .search_bg .menu_text {
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 
 .search_box.search_page_bar .search_filed input {
   width: 100%;
@@ -2748,6 +2748,7 @@ margin: 0;
   font-weight: 600;
   line-height: 26px;
   margin: 0;
+    white-space: nowrap;
 }
 
 .music_table .music_list span {
@@ -2756,6 +2757,7 @@ margin: 0;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  white-space: nowrap;
 }
 
 .music_table .music_list {
@@ -2770,6 +2772,7 @@ margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   .music_table table td {
@@ -2787,10 +2790,10 @@ margin: 0;
   /* .music_table table td:first-child{
   display: none;
 } */
-  .music_table table td:last-child {
-    display: block;
-
-  }
+.music_table table td:last-child {
+    display: flex;
+    align-items: center;
+}
 
   .music_table table td:nth-child(2) {
     display: block;
@@ -2809,8 +2812,14 @@ margin: 0;
   }
 
   .table_icon {
-    display: block;
+    display: flex;
+    gap: 10px;
   }
+  .music_table .music_list h2 {
+    font-size: 14px;
+    line-height: 18px;
+
+}
 
   .table_icon .table_icon_dropdown {
     background-color: #000 !important;
@@ -2829,9 +2838,10 @@ margin: 0;
   /* .music_table table tbody tr{
   flex: 0 0 calc(20% - 20px);
 } */
-  .music_table table td {
-    border-radius: 10px !important;
-  }
+.music_table table td {
+    height: 72px;
+}
+
 
   /* .music_table .music_list img {
     object-fit: cover;
