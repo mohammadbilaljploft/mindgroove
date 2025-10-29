@@ -4770,7 +4770,7 @@ body.common-bg {
 }
 
 .main_card_track .track-header .track-left {
-  flex: 2;
+  flex: 3;
 }
 
 .main_card_track .track-header span {
@@ -4870,6 +4870,13 @@ body.common-bg {
 
 
 .track_header_style span:nth-child(2) {
+  flex: 3;
+}
+
+.search_bg.album_pg .track_header_style span:nth-child(3) {
+  flex: 2;
+}
+.search_bg.album_pg .main_card_track .track-header span:nth-child(2){
   flex: 2;
 }
 

@@ -117,7 +117,7 @@ const handleArrowClick = () => {
         <span>Genre</span>
         <span>Mood</span>
         <span>BPM</span>
-        <span>Stems</span>
+        <span></span>
       </div>
 
       <div className="track-list">
@@ -177,7 +177,7 @@ const handleArrowClick = () => {
                   <span>{track.bpm}</span>
 
                   <div className="track-right">
-                     <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" />
+                     {/* <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" /> */}
                     <div className="track-menu-wrapper">
                       <img
                         src="/img/menu_icon.svg"

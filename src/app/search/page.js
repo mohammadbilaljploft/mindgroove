@@ -116,7 +116,7 @@ export default function Page() {
 
               </div>
 
-              <div className="exmple_sec serchbar_exmple">
+              <div className="exmple_sec serchbar_exmple ">
                 <div className="search_exmaple_select">
                   <div className="exmaple_select">
                     <Form.Select >
@@ -164,7 +164,7 @@ export default function Page() {
                     <img src="/img/right_arrow.svg" alt="Next" />
                   </button>
                 </div>
-                <div className="album_cart_sec ">
+                <div className="album_cart_sec frst_cart">
                   <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={30}

@@ -112,10 +112,8 @@ const handleArrowClick = () => {
       <div className="track_header_style">
         <span>#</span>
         <span>Title</span>
-        <span>Release Date</span>
         <span>Time</span>
         <span>Genre</span>
-        <span>Mood</span>
         <span>BPM</span>
         <span>Stems</span>
 
@@ -171,10 +169,8 @@ const handleArrowClick = () => {
                     </span>
                   </div>
 
-                  <span>{track.date}</span>
                   <span>{track.time}</span>
                   <span>{track.genre}</span>
-                  <span>{track.mood}</span>
                   <span>{track.bpm}</span>
                 
 
