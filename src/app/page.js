@@ -172,7 +172,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="album_cart_sec">
+          <div className="album_cart_sec frst_cart">
             {albums.map((album, i) => (
               <motion.div
                 key={i}
