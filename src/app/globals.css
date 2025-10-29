@@ -799,6 +799,7 @@ input:focus {
 
   .right_navbar ul {
     flex-direction: column;
+    gap: 25px;
   }
 
   .sidebar-open .left_navbar {
