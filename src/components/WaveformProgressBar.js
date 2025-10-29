@@ -65,7 +65,7 @@ export default function WaveformProgressBar() {
     if (!ctx) return
 
     // Define colors to match the image style
-    const playedColor = "#8B5CF6" // Purple
+    const playedColor = "#A67EEA" // Purple
     // FIX: Changed unplayed color from very light gray (#e0e0e0) to a darker gray for visibility
     const unplayedColor = "#999999" // Medium gray for clear visibility when paused
     

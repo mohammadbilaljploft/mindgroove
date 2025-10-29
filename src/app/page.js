@@ -116,6 +116,18 @@ export default function Home() {
                     and uninterrupted playback.
                   </p>
                 </div>
+                <div className="banner_video">
+                      <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="bg_video"
+                >
+                    <source src="img/banner_video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                </div>
               </div>
             </SwiperSlide>
           ))}
@@ -138,7 +150,7 @@ export default function Home() {
       <section className="featured_sec sec_pad">
         <Container>
           <div className="main_title align_justify">
-            <h2>Featured Album</h2>
+            <h2>New Releases</h2>
             <button className="view-all-btn">
               <span className="btn-text">View All</span>
               <span className="circle">
@@ -193,7 +205,7 @@ export default function Home() {
       <section className="featured_sec sec_pad music_categores_sec">
         <Container>
           <div className="main_title align_justify">
-            <h2>Explore Endless Music Categories </h2>
+            <h2>Explore Endless Music Categories</h2>
             <button className="view-all-btn">
               <span className="btn-text">View All</span>
               <span className="circle">
@@ -475,7 +487,7 @@ export default function Home() {
       <section className="featured_sec sec_pad ">
         <Container>
           <div className="main_title align_justify">
-            <h2>New Release </h2>
+            <h2>Trending Albums</h2>
             <button className="view-all-btn">
               <span className="btn-text">View All</span>
               <span className="circle">
@@ -803,7 +815,7 @@ export default function Home() {
         </Container>
       </section> */}
 
-       <section className="feature_sc">
+       <section className="feature_sc mt-5 mb-5">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}

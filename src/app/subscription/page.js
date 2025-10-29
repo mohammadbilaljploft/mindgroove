@@ -58,10 +58,10 @@ export default function Page() {
         >
           <h2>One year join Premium for only $999</h2>
           <p>Feel the experience of listening to music  and play as much as you like</p>
-          <div className="align_btn">
+          {/* <div className="align_btn">
             <button className="main_btn">Get Started</button>
             <button className="outline_btn">See Detail</button>
-          </div>
+          </div> */}
 
           <div className="option_or">
             <span></span>

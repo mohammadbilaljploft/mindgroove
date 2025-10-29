@@ -73,6 +73,7 @@ export default function Page() {
                                             </Col>
 
                                             <Col lg={8} xl={9}>
+                                            
                                                 <Tab.Content>
                                                     <Tab.Pane eventKey="profile">
                                                       <Row>

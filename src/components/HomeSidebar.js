@@ -50,13 +50,22 @@ export default function HomeSidebar() {
           </div>
 
           <div className="sidebar_menu">
-            <a href="" ><img src="/img/discover_icon.svg" />Discover</a>
-            <a href="" ><img src="/img/filter_icon.svg" />Filters</a>
-            <a href="" ><img src="/img/playlist_icon.svg" />Playlists</a>
-            <a href="" ><img src="/img/favourites_icon.svg" />Favourites</a>
-            <a href="" ><img src="/img/mixes_icon.svg" />My Mixes</a>
-            <a href="" ><img src="/img/video_icon.svg" />Video Editor</a>
+           <div className="shadow_1">
+             <a href="/search" ><img src="/img/discover_icon.svg" />Discover</a>
+           </div>
+           <div className="shadow_2">
+            <a href="" ><img src="/img/filter_icon.svg" />Filters</a></div>
+            <div className="shadow_3">
+            <a href="/albumdetails" ><img src="/img/playlist_icon.svg" />Playlists</a></div>
+            <div className="shadow_4">
+            <a href="/my-accounts" ><img src="/img/favourites_icon.svg" />Favourites</a></div>
+            <div className="shadow_5">
+            <a href="" ><img src="/img/mixes_icon.svg" />My Mixes</a></div>
+            <div className="shadow_6">
+            <a href="" ><img src="/img/video_icon.svg" />Video Editor</a></div>
+            <div className="shadow_7">
             <a href="" ><img src="/img/project_icon.svg" />Projects</a>
+            </div>
           </div>
         </div>
 

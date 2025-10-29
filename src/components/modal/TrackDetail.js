@@ -51,8 +51,7 @@ export default function TrackDetail(props) {
                                 <Col sm={12}>
                                     <Tab.Content>
                                         <Tab.Pane eventKey="first">
-                                            <Row className="">
-                                                <Col lg={12}>
+                                           
                                                     <div className="music_min_bx border_effect">
                                                         <div className="music_min label_green_text">
                                                             <h6>LABEL</h6>
@@ -69,32 +68,21 @@ export default function TrackDetail(props) {
                                                                 <span>TRAP</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={12}>
-                                                    <div className="music_min_bx border_effect">
-                                                        <div className="music_min">
+                                                         <div className="music_min">
                                                             <h6>MOODS</h6>
                                                             <div className="align_min">
                                                                 <span>CONFIDENT</span>
                                                                 <span>MOODY</span>
                                                             </div>
                                                         </div>
-
-                                                        <div className="music_min">
+                                                         <div className="music_min">
                                                             <h6>KEYWORDS</h6>
                                                             <div className="align_min">
                                                                 <span>PUNCHY</span>
                                                                 <span>SPORTS</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={12}>
-                                                    <div className="music_min_bx">
-
-
-                                                        <div className="music_min">
+                                                           <div className="music_min">
                                                             <h6>Keys</h6>
                                                             <div className="align_min">
                                                                 <span>CONFIDENT</span>
@@ -109,8 +97,9 @@ export default function TrackDetail(props) {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </Col>
-                                            </Row>
+                                         
+                                                  
+                                            
                                                 <div className="download_lyrics new_down">
                                               <button> <img src="/img/copy_icon012.svg" alt="" />Copy Lyrics</button>
                                           </div>
