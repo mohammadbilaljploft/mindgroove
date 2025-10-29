@@ -4668,23 +4668,26 @@ body.common-bg {
 
 .search_play_list.track_sc .track-card.active .track-header {
   border-radius: 5px;
-  background: rgba(255, 255, 255, 1) !important;
+  background: rgba(30, 30, 30, .6) !important;
   overflow: hidden;
 }
 
 .search_play_list.track_sc .track-card.active .track-header .track-info h3 {
-  color: #000;
+  color: #fff;
 }
 
 .search_play_list.track_sc .track-card.active .track-header .track-info span {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .search_play_list .track-card.active .track-header span {
-  color: #000;
+  color: #fff;
 }
 
 
+.search_play_list.track_sc .track-card.active .track-header img {
+  filter: unset;
+}
 
 .track_sc .track-card.active .track-header .track-number {
   background: var(--primary) !important;
