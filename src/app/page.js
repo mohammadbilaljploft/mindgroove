@@ -484,7 +484,7 @@ export default function Home() {
 
 
 
-      <section className="featured_sec sec_pad ">
+      <section className="featured_sec sec_pad trending">
         <Container>
           <div className="main_title align_justify">
             <h2>Trending Albums</h2>
