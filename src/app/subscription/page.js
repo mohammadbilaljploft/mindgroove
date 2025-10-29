@@ -65,16 +65,16 @@ export default function Page() {
             <button className="outline_btn">See Detail</button>
           </div> */}
 
-          <div className="option_or">
+          {/* <div className="option_or">
             <span></span>
             <p>Or</p>
             <span></span>
-          </div>
+          </div> */}
         </motion.div>
    </Container>
       </motion.section>
 
-      <section className="plan_sec sec_pad ">
+      <section className="plan_sec pb-5 ">
         <Container>
           <motion.div
             className="main_title text-center"
@@ -83,7 +83,7 @@ export default function Page() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2>CHOOSE YOURS</h2>
+            {/* <h2>CHOOSE YOURS</h2> */}
           </motion.div>
 
           <motion.div

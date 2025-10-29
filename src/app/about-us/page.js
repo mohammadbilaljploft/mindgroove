@@ -61,7 +61,7 @@ export default function Page() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="inner_banner_title"
         >
-          <span>-Subscription</span>
+          <span>-About Us</span>
           <h2>
             Sound unchained. <br /> Music, redefined.
           </h2>
@@ -156,7 +156,7 @@ export default function Page() {
 
       {/* Gallery Section */}
       <section className="sec_pad">
-        <Container>
+        <Container fluid>
           <motion.div
             initial="hidden"
             whileInView="visible"

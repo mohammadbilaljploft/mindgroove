@@ -53,7 +53,6 @@ export default function Header() {
 
   return (
     <div className="header_sec">
-      <Container>
         <div className="header_inner">
           <div className="left_navbar">
             <div className="logo_img">
@@ -284,7 +283,6 @@ export default function Header() {
             </ul>
           </div>
         </div>
-      </Container>
     </div>
   );
 }

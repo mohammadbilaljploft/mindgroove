@@ -64,7 +64,7 @@ export default function Page() {
           </div>
 
           <div className="main_content">
-      <Header />      
+           <Header />      
             <Container>
               <div className="search_box search_page_bar">
                 <div className="search_filed">
@@ -88,7 +88,7 @@ export default function Page() {
                           width: "50px",
                           height: "25px",
                           borderRadius: "25px",
-                          background: activeSection === "ask" ? "#17DCF5" : "#ccc",
+                          background: activeSection === "ask" ? "#17DCF5" : "#878787",
                           position: "relative",
                           cursor: "pointer",
                           transition: "0.3s",

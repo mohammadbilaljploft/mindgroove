@@ -26,61 +26,61 @@ export default function Footer() {
                             <div className=" footer_title">
                                 <h3> Start</h3>
                                 <ul>
-                                    <li><a href="">Home</a></li>
-                                    <li><a href="">Discover</a></li>
+                                    <li><Link href="/">Home</Link></li>
+                                    <li><Link href="">Discover</Link></li>
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>Discover</h3>
                                 <ul>
-                                    <li><a href="">Playlists </a></li>
-                                    <li><a href="">Favorites</a></li>
-                                    <li><a href="">Audio Edit</a></li>
+                                    <li><Link href="albumdetails">Playlists </Link></li>
+                                    <li><Link href="">Favorites</Link></li>
+                                    <li><Link href="">Audio Edit</Link></li>
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>Creator</h3>
                                 <ul>
-                                    <li><a href="">My Mixes</a></li>
-                                    <li><a href="">Video Editor</a></li>
-                                    <li><a href="">Projects</a></li>
+                                    <li><Link href="">My Mixes</Link></li>
+                                    <li><Link href="">Video Editor</Link></li>
+                                    <li><Link href="">Projects</Link></li>
                                     
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>Account</h3>
                                 <ul>
-                                    <li><a href="">Log In</a></li>
-                                    <li><a href="">Pricing</a></li>
-                                    <li><a href="">Start Free Trial</a></li>
+                                    <li><Link href="/login">Log In</Link></li>
+                                    <li><Link href="/subscription">Pricing</Link></li>
+                                    <li><Link href="">Start Free Trial</Link></li>
                                     
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>About</h3>
                                 <ul>
-                                    <li><a href="">About Us</a></li>
-                                    <li><a href="">Contact</a></li>
-                                    <li><a href="">FAQ</a></li>
+                                    <li><Link href="/about-us">About Us</Link></li>
+                                    <li><Link href="">Contact</Link></li>
+                                    <li><Link href="">FAQ</Link></li>
                                     
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>Resources</h3>
                                 <ul>
-                                    <li><a href="">How It Works</a></li>
-                                    <li><a href="">Tips & Tricks</a></li>
-                                    <li><a href="">Support</a></li>
+                                    <li><Link href="">How It Works</Link></li>
+                                    <li><Link href="">Tips & Tricks</Link></li>
+                                    <li><Link href="">Support</Link></li>
                                     
                                 </ul>
                             </div>
                               <div className=" footer_title">
                                 <h3>Follow Us</h3>
                                 <ul>
-                                    <li><a href=""> <img src="/img/facebook.svg" />Facebook</a></li>
-                                    <li><a href=""><img src="/img/instagram.svg" />Instagram</a></li>
-                                    <li><a href=""><img src="/img/tiktok.svg" />Tiktok</a></li>
-                                    <li><a href=""><img src="/img/youtube.svg" />YouTube</a></li>
+                                    <li><Link href=""> <img src="/img/facebook.svg" />Facebook</Link></li>
+                                    <li><Link href=""><img src="/img/instagram.svg" />Instagram</Link></li>
+                                    <li><Link href=""><img src="/img/tiktok.svg" />Tiktok</Link></li>
+                                    <li><Link href=""><img src="/img/youtube.svg" />YouTube</Link></li>
                                 </ul>
                             </div>
                     </div>

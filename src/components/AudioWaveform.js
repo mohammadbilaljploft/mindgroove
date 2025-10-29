@@ -239,7 +239,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
 
         @media (max-width: 768px) {
           .waveform-viz {
-            height: 60px;
+            height: 100px;
           }
           .play-button-circle {
             width: 26px;

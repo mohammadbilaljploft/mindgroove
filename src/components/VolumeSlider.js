@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Volume2 } from "lucide-react";
 
-const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B" }) => {
+// !important हटा दिया गया है
+const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
   const [volume, setVolume] = useState(60);
 
   const handleVolumeChange = (event) => {
@@ -12,7 +13,7 @@ const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B
 
   return (
     <div
-      className="volume_item max-w-[200px]"
+      className="volume_item max-w-[200px] flex items-center space-x-2"
       style={{ minWidth: "100px" }}
     >
       <Volume2 className="text-white h-5 w-5 flex-shrink-0" />
@@ -25,7 +26,8 @@ const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B
           step="1"
           value={volume}
           onChange={handleVolumeChange}
-          className="w-full h-[6px] cursor-pointer appearance-none bg-transparent"
+          // Tailwind classes को हटा दिया गया है क्योंकि वे::-webkit-slider-thumb से संघर्ष कर सकते हैं
+          className="volume-range-input" 
           style={{
             "--fill-color": thumbColor, 
             "--track-color": trackColor,
@@ -35,7 +37,17 @@ const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B
         />
 
         <style jsx>{`
-          input[type="range"]::-webkit-slider-runnable-track {
+          /* **यह महत्वपूर्ण बदलाव है: all: initial को apply करें** */
+          .volume-range-input {
+            all: initial; /* सभी बाहरी स्टाइलिंग रीसेट करें */
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            display: block; /* ब्लॉक डिस्प्ले सुनिश्चित करें */
+          }
+
+          /* Webkit Track (Chrome, Safari) */
+          .volume-range-input::-webkit-slider-runnable-track {
             width: 100%;
             height: 6px;
             cursor: pointer;
@@ -49,23 +61,25 @@ const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B
             border-radius: 10px;
           }
 
-          input[type="range"]::-webkit-slider-thumb {
+          /* Webkit Thumb (Chrome, Safari) */
+          .volume-range-input::-webkit-slider-thumb {
             -webkit-appearance: none;
             height: 14px;
             width: 14px;
             border-radius: 50%;
             background: var(--thumb-color);
             cursor: pointer;
-            margin-top: -4px;
+            margin-top: -4px; /* track के बीच में लाने के लिए */
             border: none;
             transition: transform 0.2s ease, background 0.3s ease;
           }
 
-          input[type="range"]::-webkit-slider-thumb:hover {
+          .volume-range-input::-webkit-slider-thumb:hover {
             transform: scale(1.1);
           }
 
-          input[type="range"]::-moz-range-track {
+          /* Firefox Track */
+          .volume-range-input::-moz-range-track {
             background: linear-gradient(
               to right,
               var(--fill-color) 0%,
@@ -77,7 +91,8 @@ const VolumeSlider = ({ thumbColor = "#00E0FF !important", trackColor = "#4B4B4B
             border-radius: 10px;
           }
 
-          input[type="range"]::-moz-range-thumb {
+          /* Firefox Thumb */
+          .volume-range-input::-moz-range-thumb {
             background: var(--thumb-color);
             height: 14px;
             width: 14px;
