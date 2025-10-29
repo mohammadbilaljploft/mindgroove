@@ -1006,7 +1006,7 @@ mix-blend-mode: darken;
   left: 50%;
   width: 100%;
   z-index: 2;
-  padding: 0 20px 0 123px;
+  padding: 0 40px 0 150px;
   transform: translate(-50%, -50%);
   transition: 0.5s;
 }
