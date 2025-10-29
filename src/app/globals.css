@@ -3848,11 +3848,13 @@ body.common-bg {
 .modal_tabs .nav-pills {
   border-radius: 80px;
   background: var(--Neutral-70);
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   padding: 2px;
   justify-content: center;
   margin: 17px auto;
+}
+.modal_tabs .nav-pills .nav-item{
+  flex: 1;
 }
 
 .modal_tabs .nav-pills .nav-link {
@@ -4470,9 +4472,10 @@ body.common-bg {
   }
 
   .modal_tabs .nav-pills .nav-link {
-    padding: 10px 24px;
+    padding: 10px 20px;
     font-size: 13px;
   }
+  
 }
 
 
