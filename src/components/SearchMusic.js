@@ -22,118 +22,118 @@ export default function SearchMusic() {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
-const tracks = [
-  {
-    title: "Sorfcore",
-    artist: "The Neighbourhood",
-    date: "Nov 4, 2023",
-    time: "3:26",
-    genre: "Score",
-    mood: "Exciting",
-    bpm: 108,
-    cover: "/img/album_img01.png",
-    trackId: "t1",
-  },
-  {
-    title: "Lost in Echoes",
-    artist: "Imagine Dragons",
-    date: "Nov 5, 2023",
-    time: "4:12",
-    genre: "Pop",
-    mood: "Chill",
-    bpm: 120,
-    cover: "/img/album_img02.png",
-    trackId: "t2",
-  },
-  {
-    title: "Crimson Sky",
-    artist: "Arctic Monkeys",
-    date: "Nov 6, 2023",
-    time: "3:50",
-    genre: "Rock",
-    mood: "Energetic",
-    bpm: 130,
-    cover: "/img/album_img03.png",
-    trackId: "t3",
-  },
-  {
-    title: "Dreamline",
-    artist: "Billie Eilish",
-    date: "Nov 7, 2023",
-    time: "3:44",
-    genre: "Alternative",
-    mood: "Calm",
-    bpm: 90,
-    cover: "/img/album_img04.png",
-    trackId: "t4",
-  },
-  {
-    title: "Echo Chamber",
-    artist: "Post Malone",
-    date: "Nov 8, 2023",
-    time: "4:00",
-    genre: "Hip Hop",
-    mood: "Groovy",
-    bpm: 105,
-    cover: "/img/album_img05.png",
-    trackId: "t5",
-  },
-  {
-    title: "Starlit Eyes",
-    artist: "Coldplay",
-    date: "Nov 9, 2023",
-    time: "3:33",
-    genre: "Pop Rock",
-    mood: "Uplifting",
-    bpm: 118,
-    cover: "/img/album_img06.png",
-    trackId: "t6",
-  },
-  {
-    title: "Wildfire",
-    artist: "Halsey",
-    date: "Nov 10, 2023",
-    time: "3:20",
-    genre: "Electro",
-    mood: "Passionate",
-    bpm: 122,
-    cover: "/img/album_img07.png",
-    trackId: "t7",
-  },
-  {
-    title: "Midnight Ride",
-    artist: "The Weeknd",
-    date: "Nov 11, 2023",
-    time: "4:45",
-    genre: "Synthwave",
-    mood: "Dark",
-    bpm: 110,
-    cover: "/img/album_img08.png",
-    trackId: "t8",
-  },
-  {
-    title: "Velvet Sky",
-    artist: "Lana Del Rey",
-    date: "Nov 12, 2023",
-    time: "3:58",
-    genre: "Indie",
-    mood: "Dreamy",
-    bpm: 95,
-    cover: "/img/album_img09.png",
-    trackId: "t9",
-  },
-  {
-    title: "Gravity Falls",
-    artist: "Ed Sheeran",
-    date: "Nov 13, 2023",
-    time: "4:15",
-    genre: "Acoustic",
-    mood: "Romantic",
-    bpm: 102,
-    cover: "/img/album_img10.png",
-    trackId: "t10",
-  },
-];
+  const tracks = [
+    {
+      title: "Sorfcore",
+      artist: "The Neighbourhood",
+      date: "Nov 4, 2023",
+      time: "3:26",
+      genre: "Score",
+      mood: "Exciting",
+      bpm: 108,
+      cover: "/img/album_img01.png",
+      trackId: "t1",
+    },
+    {
+      title: "Lost in Echoes",
+      artist: "Imagine Dragons",
+      date: "Nov 5, 2023",
+      time: "4:12",
+      genre: "Pop",
+      mood: "Chill",
+      bpm: 120,
+      cover: "/img/album_img02.png",
+      trackId: "t2",
+    },
+    {
+      title: "Crimson Sky",
+      artist: "Arctic Monkeys",
+      date: "Nov 6, 2023",
+      time: "3:50",
+      genre: "Rock",
+      mood: "Energetic",
+      bpm: 130,
+      cover: "/img/album_img03.png",
+      trackId: "t3",
+    },
+    {
+      title: "Dreamline",
+      artist: "Billie Eilish",
+      date: "Nov 7, 2023",
+      time: "3:44",
+      genre: "Alternative",
+      mood: "Calm",
+      bpm: 90,
+      cover: "/img/album_img04.png",
+      trackId: "t4",
+    },
+    {
+      title: "Echo Chamber",
+      artist: "Post Malone",
+      date: "Nov 8, 2023",
+      time: "4:00",
+      genre: "Hip Hop",
+      mood: "Groovy",
+      bpm: 105,
+      cover: "/img/album_img05.png",
+      trackId: "t5",
+    },
+    {
+      title: "Starlit Eyes",
+      artist: "Coldplay",
+      date: "Nov 9, 2023",
+      time: "3:33",
+      genre: "Pop Rock",
+      mood: "Uplifting",
+      bpm: 118,
+      cover: "/img/album_img06.png",
+      trackId: "t6",
+    },
+    {
+      title: "Wildfire",
+      artist: "Halsey",
+      date: "Nov 10, 2023",
+      time: "3:20",
+      genre: "Electro",
+      mood: "Passionate",
+      bpm: 122,
+      cover: "/img/album_img07.png",
+      trackId: "t7",
+    },
+    {
+      title: "Midnight Ride",
+      artist: "The Weeknd",
+      date: "Nov 11, 2023",
+      time: "4:45",
+      genre: "Synthwave",
+      mood: "Dark",
+      bpm: 110,
+      cover: "/img/album_img08.png",
+      trackId: "t8",
+    },
+    {
+      title: "Velvet Sky",
+      artist: "Lana Del Rey",
+      date: "Nov 12, 2023",
+      time: "3:58",
+      genre: "Indie",
+      mood: "Dreamy",
+      bpm: 95,
+      cover: "/img/album_img09.png",
+      trackId: "t9",
+    },
+    {
+      title: "Gravity Falls",
+      artist: "Ed Sheeran",
+      date: "Nov 13, 2023",
+      time: "4:15",
+      genre: "Acoustic",
+      mood: "Romantic",
+      bpm: 102,
+      cover: "/img/album_img10.png",
+      trackId: "t10",
+    },
+  ];
 
 
   const toggleLike = (trackId) => {
@@ -164,15 +164,15 @@ const tracks = [
     document.body.classList.add("active-row-click");
   };
 
-const handleArrowClick = () => {
-  document.body.classList.toggle("active-row-click");
+  const handleArrowClick = () => {
+    document.body.classList.toggle("active-row-click");
 
-  if (currentTrack) {
-    setActiveTrackId(currentTrack.trackId);
-  } else {
-    setActiveTrackId(tracks[0]?.trackId || null);
-  }
-};
+    if (currentTrack) {
+      setActiveTrackId(currentTrack.trackId);
+    } else {
+      setActiveTrackId(tracks[0]?.trackId || null);
+    }
+  };
 
   return (
     <section className="sec_pad track_sc search_play_list">
@@ -213,7 +213,16 @@ const handleArrowClick = () => {
                 className="track-number"
                 onClick={() => handleNumberClick(track)}
               >
-                {isActive ? <FaPlay color="#fff" /> : index + 1}
+                {isActive ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <g clip-path="url(#clip0_792_172)">
+                    <path d="M15.369 5.97708L8.21551 0.731576C7.65677 0.32244 6.99566 0.0760103 6.30545 0.0196032C5.61524 -0.0368039 4.92289 0.0990147 4.30514 0.412004C3.6874 0.724994 3.16839 1.20293 2.80564 1.79283C2.44289 2.38273 2.25057 3.06156 2.25 3.75408V14.2503C2.24893 14.9435 2.44024 15.6234 2.80264 16.2143C3.16505 16.8052 3.68432 17.284 4.30268 17.5973C4.92103 17.9106 5.61419 18.0461 6.30501 17.9888C6.99583 17.9316 7.6572 17.6837 8.21551 17.2728L15.369 12.0273C15.8437 11.679 16.2296 11.2238 16.4957 10.6986C16.7617 10.1733 16.9003 9.59284 16.9003 9.00408C16.9003 8.41532 16.7617 7.83483 16.4957 7.3096C16.2296 6.78437 15.8437 6.32916 15.369 5.98083V5.97708Z" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_792_172">
+                      <rect width="18" height="18" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg> : index + 1}
               </div>
 
               <div className="main_card_track">
@@ -234,9 +243,8 @@ const handleArrowClick = () => {
                     </div>
                     {/* Chevron */}
                     <span
-                      className={`accordion-toggle ${
-                        isExpanded ? "expanded" : ""
-                      }`}
+                      className={`accordion-toggle ${isExpanded ? "expanded" : ""
+                        }`}
                       onClick={(e) => {
                         e.stopPropagation();
                         toggleAccordion(track.trackId);
@@ -249,7 +257,7 @@ const handleArrowClick = () => {
                   <span>{track.time}</span>
                   <span>{track.genre}</span>
                   <span>{track.bpm}</span>
-                
+
 
                   <div className="track-right">
                     <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" />
@@ -265,7 +273,7 @@ const handleArrowClick = () => {
                       />
                       {(isDesktop || isMenuOpen) && (
                         <div className="track-menu-dropdown">
-                  
+
                           <img src="/img/info_icon.svg" alt="Info" />
                           <img src="/img/download_icon.svg" alt="Download" />
                           <img src="/img/plus_icon.svg" alt="Add" />
@@ -291,7 +299,7 @@ const handleArrowClick = () => {
                 {/* Accordion content */}
                 {isExpanded && (
                   <div className="track-accordion">
-                  
+
                     <div className="player_pitch">
                       <div className="music_min">
                         <h6>GENRE</h6>

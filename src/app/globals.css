@@ -2531,7 +2531,7 @@ input:focus {
 
 .inner_pages .header_sec {
   width: 100%;
-  padding: 10px 0 49px;
+  padding: 20px 0 49px;
   position: relative;
 }
 
@@ -2973,7 +2973,7 @@ body.common-bg {
   overflow-y: auto;
   height: calc(100vh - 250px);
   overflow-x: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   padding-top: 100px;
   justify-content: center;
 }
