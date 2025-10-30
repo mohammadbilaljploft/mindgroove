@@ -1161,13 +1161,13 @@ input:focus {
   height: 1px;
 }
 
-.sidebar_inner::-webkit-scrollbar-button {
+/* .sidebar_inner::-webkit-scrollbar-button {
   background: #ccc
-}
+} */
 
-.sidebar_inner::-webkit-scrollbar-track-piece {
+/* .sidebar_inner::-webkit-scrollbar-track-piece {
   background: #888
-}
+} */
 
 .sidebar_inner::-webkit-scrollbar-thumb {
   background: #eee
@@ -2543,10 +2543,10 @@ input:focus {
   margin-bottom: 12px;
 }
 
-.inner_pages .sidebar_box {
-  position: relative;
-  width: 100%;
-  padding-bottom: 20px;
+.search_bg .inner_pages .sidebar_box {
+  position: fixed;
+  width: fit-content;
+  padding-bottom: 120px;
   height: 100%;
 }
 
@@ -2646,7 +2646,10 @@ input:focus {
   .search_bg .inner_pages .main_content {
     padding-bottom: 30px;
   }
-
+.search_bg .inner_pages .sidebar_box {
+    padding-bottom: 20px;
+ 
+}
 }
 
 
@@ -4339,7 +4342,7 @@ body.common-bg {
   bottom: 0;
   width: 100%;
   left: 0;
-  padding: 30px;
+  padding: 18px;
   z-index: 9;
 }
 
@@ -5068,6 +5071,12 @@ body.common-bg {
 }
 
 @media (max-width:767px) {
+
+  .track_sc .track-info h3 {
+      font-size: 14px;
+    line-height: 18px;
+}
+
   .main_card_track .track-header {
     flex-direction: unset !important;
   }

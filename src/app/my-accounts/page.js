@@ -16,7 +16,7 @@ export default function Page() {
     return (
         <>
             <section className=" ">
-                <div className="">
+                <div className="profile_sc">
                     <div className="inner_pages ">
                         <div className="inner_pages_sidebar">
                             <HomeSidebar />
