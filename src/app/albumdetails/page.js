@@ -72,7 +72,7 @@ export default function Page() {
 
                     <div className="main_content">
                         <Header />
-                        <Container fluid>
+                        <Container fluid className="pdl_30">
                             <div className="album_details_banner">
                                 <div className="album_content_box">
                                     <div className="album_img">
@@ -88,9 +88,9 @@ export default function Page() {
                                             </ul>
                                         </div>
                                         <div className="track-menu-dropdown">
-                                           <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
+                                           
                                             <img src="/img/download_icon.svg" alt="Download" />
-                                            <img src="/img/plus_icon.svg" alt="Add" />
+                                            <img src="/img/share.svg" alt="Add" />
                                             <img
                                                 src={
                                                     isLiked
@@ -105,6 +105,8 @@ export default function Page() {
                                                 style={{ cursor: "pointer" }}
 
                                             />
+                                            <img src="/img/plus_icon.svg" alt="Add" />
+
                                         </div>
                                     </div>
                                 </div>
@@ -121,8 +123,7 @@ export default function Page() {
                 </div>
             </div>
 
-   <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
-
+  
         </>
     );
 }

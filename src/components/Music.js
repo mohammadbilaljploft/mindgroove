@@ -4,6 +4,7 @@ import { FaPlay, FaChevronDown } from "react-icons/fa";
 import { usePlayer } from "./PlayerContext";
 import { useState, useEffect } from "react";
 import AudioWaveform from "./AudioWaveform";
+import TrackDetail from "./modal/TrackDetail";
 
 export default function Music() {
   const { playTrack, currentTrack } = usePlayer();
@@ -12,7 +13,7 @@ export default function Music() {
   const [openMenuTrack, setOpenMenuTrack] = useState(null);
   const [isDesktop, setIsDesktop] = useState(true);
   const [activeTrackId, setActiveTrackId] = useState(null);
-
+    const [modalShow, setModalShow] = useState(false);
   // Detect desktop width
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -176,12 +177,15 @@ const handleArrowClick = () => {
 };
 
   return (
+   <>
+   
+   
     <section className="sec_pad track_sc ">
       <button className="down_arrow_player" onClick={handleArrowClick}>
         <img src="/img/down_arrow.svg" />
       </button>
 
-      <div className="main_title">
+      <div className="album_title">
         <h2>
           Tracks <span>(550+ RESULTS)</span>
         </h2>
@@ -277,7 +281,7 @@ const handleArrowClick = () => {
                       />
                       {(isDesktop || isMenuOpen) && (
                         <div className="track-menu-dropdown">
-                          <img src="/img/info_icon.svg" alt="Info" />
+                         <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
                           <img src="/img/download_icon.svg" alt="Download" />
                           <img src="/img/plus_icon.svg" alt="Add" />
                           <img
@@ -450,5 +454,11 @@ const handleArrowClick = () => {
         }
       `}</style>
     </section>
+
+
+     <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
+
+   
+   </>
   );
 }

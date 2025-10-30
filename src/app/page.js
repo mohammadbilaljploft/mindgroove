@@ -19,7 +19,7 @@ export default function Home() {
   const nextRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null);
 
-  
+
   useEffect(() => {
     if (swiperInstance) {
       // Assign refs after Swiper is initialized
@@ -117,16 +117,16 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="banner_video">
-                      <video
+                  <video
                     autoPlay
                     muted
                     loop
                     playsInline
                     className="bg_video"
-                >
+                  >
                     <source src="img/banner_video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
-                </video>
+                  </video>
                 </div>
               </div>
             </SwiperSlide>
@@ -815,69 +815,77 @@ export default function Home() {
         </Container>
       </section> */}
 
-       <section className="feature_sc mt-5 mb-5">
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        modules={[Pagination, Navigation, Autoplay]}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        navigation={{
-          prevEl: prevButtonRef.current,
-          nextEl: nextButtonRef.current,
-        }}
-        onSwiper={(swiper) => {
-          setPerfectTrackSwiper(swiper);
-          // Fix navigation refs after swiper init
-          setTimeout(() => {
-            if (swiper.params.navigation) {
-              swiper.params.navigation.prevEl = prevButtonRef.current;
-              swiper.params.navigation.nextEl = nextButtonRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }
-          });
-        }}
-        className="perfect_swipper"
-      >
-        {perfectTrackSlides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="perfect_track_box">
-              <div className="perfect_track_text">
-                <h3>
-                  How to Find the perfect track
-                </h3>
-                <p>Tips & tricks for searching.</p>
-                <a href="#" className="main_btn">
-                  Find out more
-                </a>
+      <section className="feature_sc mt-5 mb-5">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          modules={[Pagination, Navigation, Autoplay]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: prevButtonRef.current,
+            nextEl: nextButtonRef.current,
+          }}
+          onSwiper={(swiper) => {
+            setPerfectTrackSwiper(swiper);
+            // Fix navigation refs after swiper init
+            setTimeout(() => {
+              if (swiper.params.navigation) {
+                swiper.params.navigation.prevEl = prevButtonRef.current;
+                swiper.params.navigation.nextEl = nextButtonRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+            });
+          }}
+          className="perfect_swipper"
+        >
+          {perfectTrackSlides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="perfect_track_box">
+                <div className="perfect_track_text">
+                  <h3>
+                    How to Find the perfect track
+                  </h3>
+                  <p>Tips & tricks for searching.</p>
+                  <a href="#" className="main_btn">
+                    Find out more
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-      <div className="csm_navigation">
-        <div
-          ref={prevButtonRef}
-          className="custom-prev absolute top-1/2 left-4 -translate-y-1/2 z-20 cursor-pointer"
-        >
-          <img src="/img/left_arrow.svg" alt="" />
+          <div
+          ref={paginationRef}
+          className="features-pagination absolute bottom-12 left-0 right-0 z-20 flex justify-center gap-3"
+        ></div>
+
+        <div className="csm_navigation">
+          <div
+            ref={prevButtonRef}
+            className="custom-prev absolute top-1/2 left-4 -translate-y-1/2 z-20 cursor-pointer"
+          >
+            <img src="/img/left_arrow.svg" alt="" />
+          </div>
+          <div
+            ref={nextButtonRef}
+            className="custom-next absolute top-1/2 right-4 -translate-y-1/2 z-20 cursor-pointer"
+          >
+            <img src="/img/right_arrow.svg" alt="" />
+          </div>
         </div>
-        <div
-          ref={nextButtonRef}
-          className="custom-next absolute top-1/2 right-4 -translate-y-1/2 z-20 cursor-pointer"
-        >
-          <img src="/img/right_arrow.svg" alt="" />
-        </div>
+      </section>
+
+      <div className="home_footer">
+        <Footer />
       </div>
-    </section>
-
-<div className="home_footer">
-      <Footer  />
-</div>
 
     </>
 

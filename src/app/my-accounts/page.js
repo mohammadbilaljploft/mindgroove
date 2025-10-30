@@ -252,7 +252,7 @@ export default function Page() {
                                                                                         <h2>Greedy</h2>
                                                                                         <span>tate mcrae</span>
                                                                                     </div>
-                                                                                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                                                                                 </div>
                                                                             </td>
                                                                             <td>3:26</td>
@@ -431,7 +431,7 @@ export default function Page() {
                                                                                         <h2>Sorfcore</h2>
                                                                                         <span>The neighberhood</span>
                                                                                     </div>
-                                                                                  
+
                                                                                 </div>
                                                                             </td>
 
@@ -478,7 +478,7 @@ export default function Page() {
                                                                                         <h2>Greedy</h2>
                                                                                         <span>tate mcrae</span>
                                                                                     </div>
-                                                                                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                                                                                 </div>
                                                                             </td>
 
@@ -595,7 +595,7 @@ export default function Page() {
                                                     <Tab.Pane eventKey="downloads">
                                                         <div className="play_tabs">
                                                             <div className="play_title">
-                                                                <h2>Favourite</h2>
+                                                                <h2>Downloads</h2>
                                                             </div>
                                                             <div className="music_table">
                                                                 <table class="table">
@@ -611,10 +611,10 @@ export default function Page() {
                                                                             <td><span>1</span></td>
                                                                             <td>
                                                                                 <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
+                                                                                    <img src="/img/img_151.png" />
                                                                                     <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                        <h2>Water</h2>
+                                                                                        <span>Tyla</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
@@ -629,12 +629,13 @@ export default function Page() {
                                                                         <tr>
                                                                             <td><span>1</span></td>
                                                                             <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
+                                                                                 <div className="music_list">
+                                                                                    <img src="/img/img_152.png" />
                                                                                     <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                        <h2>Greedy</h2>
+                                                                                        <span>tate mcrae</span>
                                                                                     </div>
+                                                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                                                                                 </div>
                                                                             </td>
 
@@ -649,10 +650,10 @@ export default function Page() {
                                                                             <td><span>1</span></td>
                                                                             <td>
                                                                                 <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
-                                                                                    <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                    <img src="/img/img_153.png" />
+                                                                                     <div>
+                                                                                        <h2>Lovin On me</h2>
+                                                                                        <span> jack harlow</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
@@ -668,10 +669,10 @@ export default function Page() {
                                                                             <td ><span>1</span></td>
                                                                             <td>
                                                                                 <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
+                                                                                    <img src="/img/img_154.png" />
                                                                                     <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                        <h2>pain the town red</h2>
+                                                                                        <span>Doja Cat</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
@@ -687,10 +688,10 @@ export default function Page() {
                                                                             <td><span>1</span></td>
                                                                             <td>
                                                                                 <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
+                                                                                    <img src="/img/img_155.png" />
                                                                                     <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                        <h2>Lovin On me</h2>
+                                                                                        <span> jack harlow</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
@@ -706,10 +707,10 @@ export default function Page() {
                                                                             <td><span>1</span></td>
                                                                             <td>
                                                                                 <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
+                                                                                    <img src="/img/img_156.png" />
                                                                                     <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
+                                                                                        <h2>Water</h2>
+                                                                                        <span>Tyla</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
