@@ -2704,16 +2704,21 @@ input:focus {
 .music_table table tr{
   position: relative;
 }
-.music_table table tr:not(:last-child):after {
-    content: "";
-    z-index: 1;
-    background: rgba(255, 255, 255, .25);
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    bottom: -11px;
-    left: 0;
+.music_table table tr:not(:last-child) td {
+  position: relative;
 }
+
+.music_table table tr:not(:last-child) td::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 1;
+}
+
 
 .music_table table td {
   color: var(--white);
@@ -5473,6 +5478,10 @@ color: var(--white);
 }
 .album_title h2 span{
   font-size: 16px;
+}
+
+.border_bottom_td{
+  border-bottom: 1px solid #eee;
 }
 
 @media (max-width: 991px) {
