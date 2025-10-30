@@ -57,8 +57,13 @@ export default function PlayerBox() {
           style={{ display: "flex", alignItems: "center", gap: "10px", width: "50%" }}
         >
           <span>0:00</span>
-          <div style={{ flex: 1, height: "60px", display: "flex", alignItems: "center" }}>
+          {/* <div style={{ flex: 1, height: "60px", display: "flex", alignItems: "center" }}>
             <WaveformProgressBar />
+            
+          </div> */}
+
+          <div className="img_wave">
+             <img src="/img/wave_img.png" />
           </div>
           <span>{currentTrack ? currentTrack.time : "0:00"}</span>
            <img src="/img/icon_play05.svg" style={{ width: "24px", height: "24px" }} />

@@ -24,40 +24,118 @@ export default function Music() {
   }, []);
 
   const tracks = [
-    {
-      title: "Sorfcore",
-      artist: "The Neighbourhood",
-      date: "Nov 4, 2023",
-      time: "3:26",
-      genre: "Score",
-      mood: "Exciting",
-      bpm: 108,
-      cover: "/img/album_img01.png",
-      trackId: "t1",
-    },
-    {
-      title: "Track 2",
-      artist: "Artist 2",
-      date: "Nov 5, 2023",
-      time: "4:12",
-      genre: "Pop",
-      mood: "Chill",
-      bpm: 120,
-      cover: "/img/album_img02.png",
-      trackId: "t2",
-    },
-    {
-      title: "Track 3",
-      artist: "Artist 3",
-      date: "Nov 6, 2023",
-      time: "3:50",
-      genre: "Rock",
-      mood: "Energetic",
-      bpm: 130,
-      cover: "/img/album_img03.png",
-      trackId: "t3",
-    },
-  ];
+  {
+    title: "Sorfcore",
+    artist: "The Neighbourhood",
+    date: "Nov 4, 2023",
+    time: "3:26",
+    genre: "Score",
+    mood: "Exciting",
+    bpm: 108,
+    cover: "/img/album_img01.png",
+    trackId: "t1",
+  },
+  {
+    title: "Lost in Echoes",
+    artist: "Imagine Dragons",
+    date: "Nov 5, 2023",
+    time: "4:12",
+    genre: "Pop",
+    mood: "Chill",
+    bpm: 120,
+    cover: "/img/album_img02.png",
+    trackId: "t2",
+  },
+  {
+    title: "Crimson Sky",
+    artist: "Arctic Monkeys",
+    date: "Nov 6, 2023",
+    time: "3:50",
+    genre: "Rock",
+    mood: "Energetic",
+    bpm: 130,
+    cover: "/img/album_img03.png",
+    trackId: "t3",
+  },
+  {
+    title: "Dreamline",
+    artist: "Billie Eilish",
+    date: "Nov 7, 2023",
+    time: "3:44",
+    genre: "Alternative",
+    mood: "Calm",
+    bpm: 90,
+    cover: "/img/album_img04.png",
+    trackId: "t4",
+  },
+  {
+    title: "Echo Chamber",
+    artist: "Post Malone",
+    date: "Nov 8, 2023",
+    time: "4:00",
+    genre: "Hip Hop",
+    mood: "Groovy",
+    bpm: 105,
+    cover: "/img/album_img05.png",
+    trackId: "t5",
+  },
+  {
+    title: "Starlit Eyes",
+    artist: "Coldplay",
+    date: "Nov 9, 2023",
+    time: "3:33",
+    genre: "Pop Rock",
+    mood: "Uplifting",
+    bpm: 118,
+    cover: "/img/album_img06.png",
+    trackId: "t6",
+  },
+  {
+    title: "Wildfire",
+    artist: "Halsey",
+    date: "Nov 10, 2023",
+    time: "3:20",
+    genre: "Electro",
+    mood: "Passionate",
+    bpm: 122,
+    cover: "/img/album_img07.png",
+    trackId: "t7",
+  },
+  {
+    title: "Midnight Ride",
+    artist: "The Weeknd",
+    date: "Nov 11, 2023",
+    time: "4:45",
+    genre: "Synthwave",
+    mood: "Dark",
+    bpm: 110,
+    cover: "/img/album_img08.png",
+    trackId: "t8",
+  },
+  {
+    title: "Velvet Sky",
+    artist: "Lana Del Rey",
+    date: "Nov 12, 2023",
+    time: "3:58",
+    genre: "Indie",
+    mood: "Dreamy",
+    bpm: 95,
+    cover: "/img/album_img09.png",
+    trackId: "t9",
+  },
+  {
+    title: "Gravity Falls",
+    artist: "Ed Sheeran",
+    date: "Nov 13, 2023",
+    time: "4:15",
+    genre: "Acoustic",
+    mood: "Romantic",
+    bpm: 102,
+    cover: "/img/album_img10.png",
+    trackId: "t10",
+  },
+];
+
 
   const toggleLike = (trackId) => {
     setLikedTracks((prev) =>
@@ -166,7 +244,16 @@ const handleArrowClick = () => {
                         toggleAccordion(track.trackId);
                       }}
                     >
-                      <FaChevronDown />
+                      <span
+  className={`accordion-toggle ${isExpanded ? "expanded" : ""}`}
+  onClick={(e) => {
+    e.stopPropagation();
+    toggleAccordion(track.trackId);
+  }}
+>
+  <FaChevronDown />
+</span>
+
                     </span>
                   </div>
 

@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import HomeSidebar from "@/components/HomeSidebar";
 import { motion } from "framer-motion";
 import { Container, Form } from "react-bootstrap";
-import TrackDetail from "@/components/modal/TrackDetail";
 import { PlayerProvider } from "@/components/PlayerContext";
 import PlayerBox from "@/components/PlayerBox";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -401,7 +400,7 @@ export default function Page() {
           </div>
         </div>
 
-        <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
+     
 
       </div>
     </>

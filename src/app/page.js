@@ -864,13 +864,13 @@ export default function Home() {
           ref={prevButtonRef}
           className="custom-prev absolute top-1/2 left-4 -translate-y-1/2 z-20 cursor-pointer"
         >
-          <img src="/img/arrow_left.svg" alt="" />
+          <img src="/img/left_arrow.svg" alt="" />
         </div>
         <div
           ref={nextButtonRef}
           className="custom-next absolute top-1/2 right-4 -translate-y-1/2 z-20 cursor-pointer"
         >
-          <img src="/img/arrow_right.svg" alt="" />
+          <img src="/img/right_arrow.svg" alt="" />
         </div>
       </div>
     </section>

@@ -62,7 +62,7 @@ export default function HomeSidebar() {
             <div className="shadow_5">
             <a href="" ><img src="/img/mixes_icon.svg" />My Mixes</a></div>
             <div className="shadow_6">
-            <a href="" ><img src="/img/video_icon.svg" />Video Editor</a></div>
+            <a href="/videoEditor" ><img src="/img/video_icon.svg" />Video Editor</a></div>
             <div className="shadow_7">
             <a href="" ><img src="/img/project_icon.svg" />Projects</a>
             </div>

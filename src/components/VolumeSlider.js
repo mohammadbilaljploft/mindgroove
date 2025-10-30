@@ -26,7 +26,6 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
           step="1"
           value={volume}
           onChange={handleVolumeChange}
-          // Tailwind classes को हटा दिया गया है क्योंकि वे::-webkit-slider-thumb से संघर्ष कर सकते हैं
           className="volume-range-input" 
           style={{
             "--fill-color": thumbColor, 
@@ -37,16 +36,15 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
         />
 
         <style jsx>{`
-          /* **यह महत्वपूर्ण बदलाव है: all: initial को apply करें** */
           .volume-range-input {
-            all: initial; /* सभी बाहरी स्टाइलिंग रीसेट करें */
+            all: initial;
             width: 100%;
             height: 6px;
             cursor: pointer;
-            display: block; /* ब्लॉक डिस्प्ले सुनिश्चित करें */
+            display: block; 
           }
 
-          /* Webkit Track (Chrome, Safari) */
+        
           .volume-range-input::-webkit-slider-runnable-track {
             width: 100%;
             height: 6px;
@@ -61,7 +59,6 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
             border-radius: 10px;
           }
 
-          /* Webkit Thumb (Chrome, Safari) */
           .volume-range-input::-webkit-slider-thumb {
             -webkit-appearance: none;
             height: 14px;
@@ -69,7 +66,7 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
             border-radius: 50%;
             background: var(--thumb-color);
             cursor: pointer;
-            margin-top: -4px; /* track के बीच में लाने के लिए */
+            margin-top: -4px; 
             border: none;
             transition: transform 0.2s ease, background 0.3s ease;
           }
@@ -78,7 +75,6 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
             transform: scale(1.1);
           }
 
-          /* Firefox Track */
           .volume-range-input::-moz-range-track {
             background: linear-gradient(
               to right,
@@ -91,7 +87,6 @@ const VolumeSlider = ({ thumbColor = "#00E0FF", trackColor = "#4B4B4B" }) => {
             border-radius: 10px;
           }
 
-          /* Firefox Thumb */
           .volume-range-input::-moz-range-thumb {
             background: var(--thumb-color);
             height: 14px;
