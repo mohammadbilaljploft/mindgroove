@@ -74,6 +74,15 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                   <Nav.Link eventKey="playlist">Stems</Nav.Link>
                 </Nav.Item>
               </Nav>
+         <div className="player_stoper_box">
+              <img src="/img/play_list_icon01.svg" alt="" />
+              <img src="/img/play_list_icon02.svg" alt="" />
+              <img src="/img/play_list_icon03.svg" alt="" />
+              <img src="/img/play_list_icon04.svg" alt="" />
+              <img src="/img/play_list_icon05.svg" alt="" />
+              <img src="/img/play_list_icon06.svg" alt="" />
+          </div>
+
             </div>
           </Col>
 

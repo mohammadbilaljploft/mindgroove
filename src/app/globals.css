@@ -2973,8 +2973,8 @@ body.common-bg {
   overflow-y: auto;
   height: calc(100vh - 250px);
   overflow-x: hidden;
-  padding-bottom: 20px;
-  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-top: 20px;
   justify-content: center;
 }
 
@@ -5333,16 +5333,24 @@ body.common-bg {
 
  
 
-  .player_stoper_box {
+.player_stoper_box {
+    transform: unset;
     margin-bottom: 10px;
-    position: relative;
+    position: absolute;
     top: 0;
     left: auto;
-    transform: unset;
+    right: 10px;
+    margin-top: 26px;
+}
+}
+@media (max-width:575) {
+.player_stoper_box {
+    margin-bottom: 10px;
+    position: relative;
     right: 0;
+    margin-top: 26px;
 }
 }
-
 
 .fz_24 h2 {
   color: var(--Neutral-10, #FFF);
