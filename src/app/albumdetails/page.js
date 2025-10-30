@@ -88,7 +88,7 @@ export default function Page() {
                                             </ul>
                                         </div>
                                         <div className="track-menu-dropdown">
-                                           
+                                           <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
                                             <img src="/img/download_icon.svg" alt="Download" />
                                             <img src="/img/share.svg" alt="Add" />
                                             <img
@@ -123,6 +123,7 @@ export default function Page() {
                 </div>
             </div>
 
+                <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
   
         </>
     );

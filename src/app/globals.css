@@ -2720,23 +2720,23 @@ input:focus {
   line-height: 20px;
   vertical-align: middle;
   border-radius: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
-  border-right: unset !important;
-  border-left: unset !important;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important; */
+  /* border-right: unset !important;
+  border-left: unset !important; */
   background: rgba(30, 30, 30, 0.30) !important;
   backdrop-filter: blur(7.5px) !important;
   padding-right: 15px;
 }
 
-.music_table table td:nth-child(2) {
+/* .music_table table td:nth-child(2) {
   border-left: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
 .music_table table td:last-child {
   border-right: 1px solid rgba(255, 255, 255, 0.25) !important;
 
-}
+} */
 
 
 /* .music_table table th:first-child {

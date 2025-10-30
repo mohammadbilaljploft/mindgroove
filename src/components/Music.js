@@ -281,7 +281,7 @@ const handleArrowClick = () => {
                       />
                       {(isDesktop || isMenuOpen) && (
                         <div className="track-menu-dropdown">
-                         <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
+                        <img src="/img/info_icon.svg" alt="Info" />
                           <img src="/img/download_icon.svg" alt="Download" />
                           <img src="/img/plus_icon.svg" alt="Add" />
                           <img
@@ -456,7 +456,7 @@ const handleArrowClick = () => {
     </section>
 
 
-     <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
+    
 
    
    </>
