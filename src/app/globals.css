@@ -2322,7 +2322,11 @@ input:focus {
   line-height: 26px;
 }
 
-
+@media (max-width:1600) {
+  .hero_banner_title h3 {
+    font-size: 64px;
+}
+}
 @media (max-width:1400) {
   .release_cart_box .release_cart_img {
     height: 500px;
@@ -5482,9 +5486,7 @@ color: var(--white);
 .control-info {
     flex: 0 0 16%;
 }
-.hero_banner_title h3 {
-    font-size: 64px;
-}
+
 }
 
 @media (max-width:1500px) {
