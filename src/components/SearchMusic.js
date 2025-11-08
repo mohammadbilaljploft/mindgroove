@@ -1,9 +1,8 @@
 "use client";
 
-import { FaPlay, FaChevronDown } from "react-icons/fa";
 import { usePlayer } from "./PlayerContext";
 import { useState, useEffect } from "react";
-import AudioWaveform from "./AudioWaveform";
+import { Form } from "react-bootstrap";
 
 export default function SearchMusic() {
   const { playTrack, currentTrack } = usePlayer();
@@ -174,6 +173,35 @@ export default function SearchMusic() {
     }
   };
 
+
+   const [showCheckboxes, setShowCheckboxes] = useState(false);
+  const [selectedTracks, setSelectedTracks] = useState([]);
+
+  // ✅ Toggle Multi Select with text + body class
+  const toggleMultiSelect = () => {
+    setShowCheckboxes((prev) => {
+      const newState = !prev;
+
+      // Body class toggle
+      if (newState) {
+        document.body.classList.add("multi-select-active");
+      } else {
+        document.body.classList.remove("multi-select-active");
+        setSelectedTracks([]); // clear selection when turning off
+      }
+
+      return newState;
+    });
+  };
+
+  const handleCheckboxChange = (trackId) => {
+    setSelectedTracks((prev) =>
+      prev.includes(trackId)
+        ? prev.filter((id) => id !== trackId)
+        : [...prev, trackId]
+    );
+  };
+
   return (
     <section className="sec_pad track_sc search_play_list">
       <button className="down_arrow_player" onClick={handleArrowClick}>
@@ -187,12 +215,26 @@ export default function SearchMusic() {
       </div>
 
       <div className="track_header_style">
+
         <span>#</span>
         <span>Title</span>
         <span>Time</span>
         <span>Genre</span>
         <span>BPM</span>
         <span>Stems</span>
+
+        <div className="item_multiselect">
+         <button><img src="/img/plus_icon.svg" alt="Add" />Add</button>
+         <button><img src="/img/white_heart.svg" alt="Download" />Favorite</button>
+         <button> <img src="/img/download_icon.svg" alt="Download" />Download</button>
+        </div>
+
+         <span onClick={toggleMultiSelect} style={{ cursor: "pointer" }}>
+          <span className="select_multi">
+            {showCheckboxes ? "Deselect" : "Multi-Select"}
+            <img src="/img/multiselect.svg" alt="" />
+          </span>
+        </span>
 
       </div>
 
@@ -209,10 +251,23 @@ export default function SearchMusic() {
               className={`track-card ${isActive ? "active" : ""}`}
             >
               {/* Track number */}
+                  {showCheckboxes && (
+                  <div className="multi-checkbox" onClick={(e) => e.stopPropagation()}>
+                    <Form.Check
+                      inline
+                      name="track-select"
+                      type="checkbox"
+                      id={`track-checkbox-${track.trackId}`}
+                      checked={selectedTracks.includes(track.trackId)}
+                      onChange={() => handleCheckboxChange(track.trackId)}
+                    />
+                  </div>
+                )}
               <div
                 className="track-number"
                 onClick={() => handleNumberClick(track)}
               >
+            
                 {isActive ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <g clip-path="url(#clip0_792_172)">
                     <path d="M15.369 5.97708L8.21551 0.731576C7.65677 0.32244 6.99566 0.0760103 6.30545 0.0196032C5.61524 -0.0368039 4.92289 0.0990147 4.30514 0.412004C3.6874 0.724994 3.16839 1.20293 2.80564 1.79283C2.44289 2.38273 2.25057 3.06156 2.25 3.75408V14.2503C2.24893 14.9435 2.44024 15.6234 2.80264 16.2143C3.16505 16.8052 3.68432 17.284 4.30268 17.5973C4.92103 17.9106 5.61419 18.0461 6.30501 17.9888C6.99583 17.9316 7.6572 17.6837 8.21551 17.2728L15.369 12.0273C15.8437 11.679 16.2296 11.2238 16.4957 10.6986C16.7617 10.1733 16.9003 9.59284 16.9003 9.00408C16.9003 8.41532 16.7617 7.83483 16.4957 7.3096C16.2296 6.78437 15.8437 6.32916 15.369 5.98083V5.97708Z" fill="white" />
@@ -257,10 +312,10 @@ export default function SearchMusic() {
                   <span>{track.time}</span>
                   <span>{track.genre}</span>
                   <span>{track.bpm}</span>
-
+                  <span><img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" /></span>
 
                   <div className="track-right">
-                    <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" />
+
                     <div className="track-menu-wrapper">
                       <img
                         src="/img/menu_icon.svg"

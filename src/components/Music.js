@@ -5,6 +5,7 @@ import { usePlayer } from "./PlayerContext";
 import { useState, useEffect } from "react";
 import AudioWaveform from "./AudioWaveform";
 import TrackDetail from "./modal/TrackDetail";
+import { Form } from "react-bootstrap";
 
 export default function Music() {
   const { playTrack, currentTrack } = usePlayer();
@@ -176,6 +177,38 @@ const handleArrowClick = () => {
   }
 };
 
+
+
+  const [showCheckboxes, setShowCheckboxes] = useState(false);
+  const [selectedTracks, setSelectedTracks] = useState([]);
+
+  // ✅ Toggle Multi Select with text + body class
+  const toggleMultiSelect = () => {
+    setShowCheckboxes((prev) => {
+      const newState = !prev;
+
+      // Body class toggle
+      if (newState) {
+        document.body.classList.add("multi-select-active");
+      } else {
+        document.body.classList.remove("multi-select-active");
+        setSelectedTracks([]); // clear selection when turning off
+      }
+
+      return newState;
+    });
+  };
+
+  const handleCheckboxChange = (trackId) => {
+    setSelectedTracks((prev) =>
+      prev.includes(trackId)
+        ? prev.filter((id) => id !== trackId)
+        : [...prev, trackId]
+    );
+  };
+
+
+
   return (
    <>
    
@@ -194,12 +227,27 @@ const handleArrowClick = () => {
       <div className="track_header_style">
         <span>#</span>
         <span>Title</span>
-        <span>Release Date</span>
+        {/* <span>Release Date</span> */}
         <span>Time</span>
         <span>Genre</span>
         <span>Mood</span>
         <span>BPM</span>
-        <span></span>
+          <span>Stems</span>
+     <div className="item_multiselect">
+         <button><img src="/img/plus_icon.svg" alt="Add" />Add</button>
+         <button><img src="/img/white_heart.svg" alt="Download" />Favorite</button>
+         <button> <img src="/img/download_icon.svg" alt="Download" />Download</button>
+        </div>
+
+         <span onClick={toggleMultiSelect} style={{ cursor: "pointer" }}>
+          <span className="select_multi">
+            {showCheckboxes ? "Deselect" : "Multi-Select"}
+            <img src="/img/multiselect.svg" alt="" />
+          </span>
+        </span>
+
+
+
       </div>
 
       <div className="track-list">
@@ -214,6 +262,19 @@ const handleArrowClick = () => {
               key={track.trackId}
               className={`track-card ${isActive ? "active" : ""}`}
             >
+
+                {showCheckboxes && (
+                  <div className="multi-checkbox" onClick={(e) => e.stopPropagation()}>
+                    <Form.Check
+                      inline
+                      name="track-select"
+                      type="checkbox"
+                      id={`track-checkbox-${track.trackId}`}
+                      checked={selectedTracks.includes(track.trackId)}
+                      onChange={() => handleCheckboxChange(track.trackId)}
+                    />
+                  </div>
+                )}
               {/* Track number */}
               <div
                 className="track-number"
@@ -270,14 +331,15 @@ const handleArrowClick = () => {
                     </span>
                   </div>
 
-                  <span>{track.date}</span>
+                  {/* <span>{track.date}</span> */}
                   <span>{track.time}</span>
                   <span>{track.genre}</span>
                   <span>{track.mood}</span>
                   <span>{track.bpm}</span>
+                  <span>    <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" /></span>
 
                   <div className="track-right">
-                     {/* <img src="/img/fillter_icon0152.svg" className="icon_fill" alt="musical" /> */}
+                 
                     <div className="track-menu-wrapper">
                       <img
                         src="/img/menu_icon.svg"
@@ -319,7 +381,11 @@ const handleArrowClick = () => {
                       liked={isLiked}
                       onToggleLike={() => toggleLike(track.trackId)}
                     />
-                    <div className="player_pitch">
+
+
+
+
+                    {/* <div className="player_pitch">
                       <div className="music_min">
                         <h6>GENRE</h6>
                         <div className="align_min">
@@ -340,7 +406,10 @@ const handleArrowClick = () => {
                           <span>SPORTS</span>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+
+                  
+
                   </div>
                 )}
               </div>

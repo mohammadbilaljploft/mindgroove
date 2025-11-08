@@ -12,6 +12,7 @@ import HomeSidebar from "@/components/HomeSidebar";
 import { Col, Container, Row } from "react-bootstrap";
 import Discover from "@/components/Discover";
 import Footer from "@/components/Footer";
+import PlayerBoxSec from "@/components/PlayerBoxSec";
 
 export default function Home() {
   const paginationRef = useRef(null);
@@ -884,6 +885,7 @@ export default function Home() {
       </section>
 
       <div className="home_footer">
+          <PlayerBoxSec />
         <Footer />
       </div>
 

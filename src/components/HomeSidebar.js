@@ -5,7 +5,7 @@ import { Container, Form } from "react-bootstrap";
 export default function HomeSidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const isMobile = () => window.innerWidth < 992;
+  const isMobile = () => window.innerWidth < 1300;
 
   const handleClose = () => {
     if (isMobile()) {

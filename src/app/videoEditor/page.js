@@ -12,6 +12,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SearchMusic from "@/components/SearchMusic";
+import PlayerBoxSec from "@/components/PlayerBoxSec";
+import Footer from "@/components/Footer";
 
 
 export default function Page() {
@@ -72,9 +74,13 @@ export default function Page() {
           </div>
         </div>
 
-     
+    
 
       </div>
+        <div className="others_pages_ft">
+                      <PlayerBoxSec />
+                     <Footer />
+                 </div>
     </>
   );
 }

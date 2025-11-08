@@ -13,6 +13,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Footer from "@/components/Footer";
 
 export default function Page() {
     const [likedTracks, setLikedTracks] = useState([]); // ✅ Added
@@ -79,8 +80,10 @@ export default function Page() {
                                         <img src="/img/tracklist_img.png" alt="Play" />
                                     </div>
                                     <div className="album_content_title">
+                                        <span>Mindgroove-MG010</span>
                                         <h3>{songData.title}</h3>
-                                        <p>Tate McRae, The Neighbourhood, Doja Cat and more...</p>
+                                        <span>Calm Flow</span>
+                                        <p>Tate mcree, nightmares, the neighberhood, doja cat and ...</p>
                                         <div className="album_list">
                                             <span>20 songs </span>
                                             <ul className="bullet_list">
@@ -88,7 +91,7 @@ export default function Page() {
                                             </ul>
                                         </div>
                                         <div className="track-menu-dropdown">
-                                           <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
+                                            <button onClick={() => setModalShow(true)}> <img src="/img/info_icon.svg" alt="Info" /></button>
                                             <img src="/img/download_icon.svg" alt="Download" />
                                             <img src="/img/share.svg" alt="Add" />
                                             <img
@@ -123,8 +126,11 @@ export default function Page() {
                 </div>
             </div>
 
-                <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
-  
+            <TrackDetail show={modalShow} onHide={() => setModalShow(false)} />
+            <div className="others_pages_ft">
+                <Footer />
+            </div>
+
         </>
     );
 }

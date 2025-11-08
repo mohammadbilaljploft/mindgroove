@@ -270,9 +270,9 @@ export default function Header() {
                   )}
                 </li>
               </ul>
-              <li className="free_trial">
+              {/* <li className="free_trial">
                 <a href="/subscription">Start Free Trial</a>
-              </li>
+              </li> */}
 
  <li >
                 <a href="/subscription">Pricing</a>

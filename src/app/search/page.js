@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SearchMusic from "@/components/SearchMusic";
+import Footer from "@/components/Footer";
 
 
 export default function Page() {
@@ -403,6 +404,11 @@ export default function Page() {
      
 
       </div>
+
+       <div className="others_pages_ft">
+                <Footer />
+            </div>
+
     </>
   );
 }

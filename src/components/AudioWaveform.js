@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Col, Nav, Row, Tab } from "react-bootstrap";
+import { Col, Form, Nav, Row, Tab } from "react-bootstrap";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }) {
@@ -60,6 +60,8 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
     }));
   };
 
+
+
   return (
     <div className="waveform_tabs_sec">
       <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
@@ -74,14 +76,7 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                   <Nav.Link eventKey="playlist">Stems</Nav.Link>
                 </Nav.Item>
               </Nav>
-         <div className="player_stoper_box">
-              <img src="/img/play_list_icon01.svg" alt="" />
-              <img src="/img/play_list_icon02.svg" alt="" />
-              <img src="/img/play_list_icon03.svg" alt="" />
-              <img src="/img/play_list_icon04.svg" alt="" />
-              <img src="/img/play_list_icon05.svg" alt="" />
-              <img src="/img/play_list_icon06.svg" alt="" />
-          </div>
+   
 
             </div>
           </Col>
@@ -94,7 +89,16 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                   {["Full Version", "30 Seconds", "Instrumental", "Instrumental 30"].map(
                     (label, i) => (
                       <div key={i} className="waveform_align">
+                        <div className="multi-checkbox waveformcheck" onClick={(e) => e.stopPropagation()}>
+                          <Form.Check
+                            inline
+                            name="track-select"
+                            type="checkbox"
+                            id="track-checkbox"
+                          />
+                        </div>
                         <div className="control-info">
+
                           <div className="play-button-circle" onClick={togglePlay}>
                             {isPlaying ? <FaPause size={14} /> : <FaPlay size={14} />}
                           </div>
@@ -141,6 +145,14 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                   ].map(({ name, color, bar }, i) => (
                     <div key={i} className={`waveform_align stems column-layout ${color}`}>
                       <div className="control-info color">
+                          <div className="multi-checkbox waveformcheck" onClick={(e) => e.stopPropagation()}>
+                          <Form.Check
+                            inline
+                            name="track-select"
+                            type="checkbox"
+                            id="track-checkbox"
+                          />
+                        </div>
                         <div className="play-button-circle" onClick={togglePlay}>
                           {isPlaying ? <FaPause size={14} /> : <FaPlay size={14} />}
                         </div>
@@ -198,6 +210,32 @@ export default function AudioWaveform({ duration = "2:00", liked, onToggleLike }
                     </div>
                   ))}
                 </div>
+
+                <div className="conroller_play_list">
+  <div className="item">
+     <span> <img src="/img/reset_icon.svg" alt="Add" /></span>
+     <h6>Reset Settings</h6>
+  </div>
+
+  <div className="middle_item ">
+   <div className="middle_cntrol">
+     <span><img src="/img/start_play_icon.svg" alt="Add" /></span>
+     <h6>Start</h6>
+   </div>
+    <div className="middle_cntrol">
+     <span><img src="/img/end_play_icon.svg" alt="Add" /></span>
+     <h6>Play All</h6>
+   </div>
+      <div className="middle_cntrol">
+     <span><img src="/img/export_play_icon.svg" alt="Add" /></span>
+     <h6>Export</h6>
+   </div>
+  </div>
+    <div className="item">
+     <span> <img src="/img/save_play_icon.svg" alt="Add" /></span>
+     <h6>Save Mix</h6>
+  </div>
+</div>
               </Tab.Pane>
             </Tab.Content>
           </Col>

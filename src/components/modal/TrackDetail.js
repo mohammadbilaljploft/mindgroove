@@ -101,7 +101,7 @@ export default function TrackDetail(props) {
                                                   
                                             
                                                 <div className="download_lyrics new_down">
-                                              <button> <img src="/img/copy_icon012.svg" alt="" />Copy Lyrics</button>
+                                              <button> <img src="/img/copy_icon012.svg" alt="" />Copy Publishing</button>
                                           </div>
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="second">

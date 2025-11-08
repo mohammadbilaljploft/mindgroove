@@ -8,6 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import Header from "@/components/Header";
 import Music from "@/components/Music";
+import PlayerBoxSec from "@/components/PlayerBoxSec";
+import Footer from "@/components/Footer";
 
 export default function Page() {
 
@@ -15,6 +17,13 @@ export default function Page() {
 
     return (
         <>
+
+            <div className="main_dvv">
+                <div className="bg_img">
+                    <img src="/img/other_page.png" />
+                </div>
+            </div>
+
             <section className=" ">
                 <div className="profile_sc">
                     <div className="inner_pages ">
@@ -25,7 +34,6 @@ export default function Page() {
                         <div className="main_content">
                             <Header />
                             <Container fluid>
-
                                 <div className="profile_box">
                                     <div className="profile_img">
                                         <img src="/img/img_profile.png" />
@@ -47,17 +55,20 @@ export default function Page() {
                                 <div className="tabs_sec ">
                                     <Tab.Container id="left-tabs-example" defaultActiveKey="profile">
                                         <Row className="g-5">
-                                            <Col lg={3} xl={2}>
+                                            <Col lg={3} xl={3} xxl={2}>
                                                 <div className="nav_item_tab_box">
                                                     <Nav variant="pills" className="flex-column">
                                                         <Nav.Item>
                                                             <Nav.Link eventKey="profile">My Profile </Nav.Link>
                                                         </Nav.Item>
                                                         <Nav.Item>
-                                                            <Nav.Link eventKey="playlist">My Playlist</Nav.Link>
+                                                            <Nav.Link eventKey="Content">Content ID</Nav.Link>
                                                         </Nav.Item>
                                                         <Nav.Item>
-                                                            <Nav.Link eventKey="favorites">Favorites</Nav.Link>
+                                                            <Nav.Link eventKey="Billing">Billing</Nav.Link>
+                                                        </Nav.Item>
+                                                         <Nav.Item>
+                                                            <Nav.Link eventKey="Subscription">Manage Subscription</Nav.Link>
                                                         </Nav.Item>
                                                         <Nav.Item>
                                                             <Nav.Link eventKey="downloads">Downloads</Nav.Link>
@@ -72,7 +83,7 @@ export default function Page() {
                                                 </div>
                                             </Col>
 
-                                            <Col lg={8} xl={10}>
+                                            <Col lg={8} xl={9} xxl={10}>
 
                                                 <Tab.Content>
                                                     <Tab.Pane eventKey="profile">
@@ -198,398 +209,15 @@ export default function Page() {
                                                         </Row>
                                                     </Tab.Pane>
 
-                                                    <Tab.Pane eventKey="playlist">
-                                                        <div className="play_tabs">
-                                                            <div className="play_title">
-                                                                <h2>My Playlist</h2>
-                                                            </div>
-                                                            <div className="music_table">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            {/* <th scope="col">#</th> */}
-                                                                            <th scope="col">Title</th>
-                                                                            <th scope="col">Time</th>
-                                                                            <th scope="col">Genre</th>
-                                                                            <th scope="col">Mood</th>
-                                                                            <th scope="col">BPM</th>
-                                                                            <th scope="col"></th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_151.png" />
-                                                                                    <div>
-                                                                                        <h2>Skyfall Beats</h2>
-                                                                                        <span>nightmares</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_152.png" />
-                                                                                    <div>
-                                                                                        <h2>Greedy</h2>
-                                                                                        <span>tate mcrae</span>
-                                                                                    </div>
-                                                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_153.png" />
-                                                                                    <div>
-                                                                                        <h2>Lovin On me</h2>
-                                                                                        <span> jack harlow</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td ><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_154.png" />
-                                                                                    <div>
-                                                                                        <h2>pain the town red</h2>
-                                                                                        <span>Doja Cat</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_155.png" />
-                                                                                    <div>
-                                                                                        <h2>Dancin On Night</h2>
-                                                                                        <span>Dualipa</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_156.png" />
-                                                                                    <div>
-                                                                                        <h2>Water</h2>
-                                                                                        <span>Tyla</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
-                                                                                    <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>3:26</td>
-                                                                            <td>Score</td>
-                                                                            <td>Exciting</td>
-                                                                            <td>108</td>
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    <img src="/img/menu_icon.svg" />
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
+                                                    <Tab.Pane eventKey="Content">
+                                                    Content
                                                     </Tab.Pane>
 
-                                                    <Tab.Pane eventKey="favorites">
-                                                        <div className="play_tabs">
-                                                            <div className="play_title">
-                                                                <h2>Favourite</h2>
-                                                            </div>
-                                                            <div className="music_table">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            {/* <th scope="col">#</th> */}
-                                                                            <th scope="col">Title</th>
-
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/table_img.png" />
-                                                                                    <div>
-                                                                                        <h2>Sorfcore</h2>
-                                                                                        <span>The neighberhood</span>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_151.png" />
-                                                                                    <div>
-                                                                                        <h2>Skyfall Beats</h2>
-                                                                                        <span>nightmares</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_152.png" />
-                                                                                    <div>
-                                                                                        <h2>Greedy</h2>
-                                                                                        <span>tate mcrae</span>
-                                                                                    </div>
-                                                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td ><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_153.png" />
-                                                                                    <div>
-                                                                                        <h2>Lovin On me</h2>
-                                                                                        <span> jack harlow</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_154.png" />
-                                                                                    <div>
-                                                                                        <h2>pain the town red</h2>
-                                                                                        <span>Doja Cat</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_155.png" />
-                                                                                    <div>
-                                                                                        <h2>Dancin On Night</h2>
-                                                                                        <span>Dualipa</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td><span>1</span></td>
-                                                                            <td>
-                                                                                <div className="music_list">
-                                                                                    <img src="/img/img_156.png" />
-                                                                                    <div>
-                                                                                        <h2>Water</h2>
-                                                                                        <span>Tyla</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-
-                                                                            <td>
-                                                                                <div className="table_icon row_rigt">
-                                                                                    <img src="/img/info_icon.svg" />
-                                                                                    <img src="/img/download_icon.svg" />
-                                                                                    <img src="/img/plus_icon.svg" />
-                                                                                    <img src="/img/heart_icon.svg" />
-                                                                                    {/* <img src="/img/menu_icon.svg" /> */}
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-
-
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
+                                                    <Tab.Pane eventKey="Billing">
+                                             Billing
+                                                    </Tab.Pane>
+                                                    <Tab.Pane eventKey="Subscription">
+                                             Subscription
                                                     </Tab.Pane>
 
                                                     <Tab.Pane eventKey="downloads">
@@ -629,7 +257,7 @@ export default function Page() {
                                                                         <tr>
                                                                             <td><span>1</span></td>
                                                                             <td>
-                                                                                 <div className="music_list">
+                                                                                <div className="music_list">
                                                                                     <img src="/img/img_152.png" />
                                                                                     <div>
                                                                                         <h2>Greedy</h2>
@@ -651,7 +279,7 @@ export default function Page() {
                                                                             <td>
                                                                                 <div className="music_list">
                                                                                     <img src="/img/img_153.png" />
-                                                                                     <div>
+                                                                                    <div>
                                                                                         <h2>Lovin On me</h2>
                                                                                         <span> jack harlow</span>
                                                                                     </div>
@@ -760,6 +388,12 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+
+
+            <div className="others_pages_ft">
+                <PlayerBoxSec />
+                <Footer />
+            </div>
 
         </>
     );
